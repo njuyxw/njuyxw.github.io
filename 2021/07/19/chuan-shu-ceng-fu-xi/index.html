@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链路层复习, njuyxw&#39;s homepage">
+    <meta name="keywords" content="传输层复习, njuyxw&#39;s homepage">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链路层复习 | njuyxw&#39;s homepage</title>
+    <title>传输层复习 | njuyxw&#39;s homepage</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链路层复习</h1>
+                    <h1 class="description center-align post-title">传输层复习</h1>
                 </div>
             </div>
         </div>
@@ -501,228 +501,175 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="链路层概念问答"><a href="#链路层概念问答" class="headerlink" title="链路层概念问答"></a>链路层概念问答</h1><p><strong>1.链路层服务有哪些？</strong></p>
-<p>封装成帧；链路访问；可靠传输；差错控制</p>
-<p><strong>2.有哪些链路类型？</strong></p>
-<p>点对点有线链路；多路访问有线链路（广播链路）；无线链路</p>
-<p><strong>3.描述多路访问控制的原因。</strong></p>
-<p>共享一个广播信道，从而必须避免同时“说话”，否则会导致冲突。</p>
-<p><strong>4.多路访问控制协议有哪三个技术？</strong></p>
-<p>信道划分；轮询访问；随机接入</p>
-<p><strong>5.描述如何做(奇)偶校验。</strong></p>
-<p>一维：一个校验位保证有偶数个1。 可以检测出1-bit的错误</p>
-<p>二维：给出一个bit方阵，对每一行每一列做偶校验，可以检测并纠正出1-bit错误，可以检测出2-bit错误。</p>
-<p><strong>6.描述CRC循环冗余码如何工作？</strong></p>
-<p>D:数据；r：阶；G：生成多项式 最高阶为r</p>
-<p>最终的校验位为R=(D&lt;&lt;r)/G的余数，r位。最终传输的结果位D:R。注意这里的除法是循环移位模2运算，每次减是做异或。</p>
-<img src="/pic/image-1.png"  style="zoom:20%;" />
-
-<p><strong>7.描述令牌环局域网。</strong></p>
-<p>来自标准802.5。链路成一个单向环，连接了每个中继器，中继器另一端连到主机（附属端）。</p>
-<p>接受状态：扫描bit流寻找匹配，如果目的地址匹配则发送给附属端，否则修改相应bit位并转发。</p>
-<p>发送状态：回收帧并发送给附属端检查，可能缓冲其他帧以便重发。</p>
-<p>进过状态：相当于一条线。</p>
-<p>在环中维持一个令牌，当某个点要发送数据的时候，收回该令牌，发送数据，绕一圈过后销毁数据，释放令牌。</p>
-<p><strong>8.描述旧以太网在结构上和当前以太网的区别。</strong></p>
-<p>旧以太网采用广播链路，总线型，需要用到CSMA/CD协议；当前以太网采用链路层交换机，采用自学习或最小生成树算法进行路由。</p>
-<p><strong>9.以太网的两个基本特征？</strong></p>
-<p>无连接，不可靠。</p>
-<p><strong>10.简要描述以太网帧格式。</strong></p>
-<img src="/pic/image-20210617165108944.png"  style="zoom:30%;" />
-
-<p>Preamble：7字节用来时间同步，1bit用来表明帧的开始</p>
-<p>地址：6 字节；类型：2字节 表示高层协议；CRC：4字节，循环冗余校验码；数据最大1500字节，最小46字节；地址为MAC地址，48比特。全球唯一。</p>
-<p><strong>11.封装成帧有哪些方法？</strong></p>
-<p>成帧的核心问题：如何判断帧的开始和结束。</p>
-<p>简单方法：计数字节；头部表示还有多少内容；但是出错会产生问题。</p>
-<p>填充哨兵比特：如01111110 作为开始, 01111111作为结束；为了解决该bit在数据内部有，解决方法：数据部分每五个1加一个0</p>
-<p><strong>12.理想的多路访问控制有什么要求？</strong></p>
-<p>一个节点有R的传输速率，n个节点有R/n个传输速率；去中心化；简单化</p>
-<p><strong>13.简述信道划分协议。</strong></p>
-<p>TDMA：划分帧，每一帧分时隙分给固定的工作站。</p>
-<p>FDMA：频分复用，划分频率</p>
-<p>CDMA：每个站点维持一个code，保证code们相互正交。编码：如果是1发code，0发code的反。发送：将所有信息相加</p>
-<p>分解：将最终结果点乘相应站点的code，结果除以code的大小。</p>
-<p><strong>14.简述轮询访问协议。</strong></p>
-<p>轮询协议：主节点轮询“邀请”从节点传输。  （蓝牙）</p>
-<p>缺点：轮询开销；时延；单点故障</p>
-<p>令牌环协议：令牌开销；时延；单点故障</p>
-<p><strong>15.随机接入协议有哪些？</strong></p>
-<p>ALOHA/时隙ALOHA；CSMA CD CA (1坚持，非坚持，p坚持)</p>
-<p><strong>16.随机接入协议要解决哪两个关键问题？</strong></p>
-<p>如何检测或者避免碰撞；如何从碰撞事件中恢复</p>
-<p><strong>17.描述ALOHA协议。</strong></p>
-<p>ALOHA:不监听信道；接受端：如果收到ack，以p的概率重发，1-p概率等待，没有则放弃；发送端：帧无错发送ack</p>
-<p>时隙ALOHA：对时间划分时隙，每个时隙等于帧的传输时间，如果没有碰撞，在下一个时隙发包，如果碰撞了在接下来的时隙以p的概率重发。</p>
-<p><strong>18.简述CSMA载波侦听多路访问的主要思想。</strong></p>
-<p>在传输之前侦听信道，空闲则发包，忙则等待。但是无法消除碰撞，由于传播时延。</p>
-<p><strong>19.简述非坚持CSMA。</strong></p>
-<p>1.如果空闲，则发包。</p>
-<p>2.如果忙则等待一段时间再监听重复1。</p>
-<p><strong>20.简述1坚持CSMA。</strong></p>
-<p>1.如果空闲则发包。</p>
-<p>2.如果忙则一直侦听直到空闲为止，然后立即发包。</p>
-<p><strong>21.简述p坚持CSMA。</strong></p>
-<p>1.如果空闲，则以p的概率发送，1-p的概率延迟一个时间单元（最大传播时延）发送。</p>
-<p>2.如果忙，监听直到空闲重复1</p>
-<p>3.如果传输延迟了1个时间单元则重复1</p>
-<p><strong>22.简述CSMA/CD。</strong></p>
-<p>1.如果空闲，则发送。</p>
-<p>2.如果忙则一直侦听直到空闲，立即发送。</p>
-<p>3.如果检测到了碰撞，则发送Jam信号（连续几个字节全1的信号），终止。</p>
-<p>4.发送jam之后，等待随机的时间转1</p>
-<p><strong>23.CSMA要求的最小帧长如何推导？</strong></p>
-<p>B：宽；L：长；V:传播速率</p>
-<p>S/B&gt;2<em>T=2</em>L/V =&gt; S&gt;*L*B/V</p>
-<p><strong>24.随机接入的三个要素是什么？</strong></p>
-<p>载波侦听、碰撞检测、随机性</p>
-<p><strong>25.描述完整的CSMA/CD协议。</strong></p>
-<img src="/pic/image-20210618103854981.png"  style="zoom:25%;" />
-
-<p>802.3协议。这里要注意帧间间隔，以及延迟的时间为512*Rbit时间。二进制指数后退算法注意N=15，10两个分界点。</p>
-<p><strong>26.有哪些用来衡量mac协议的准则？</strong></p>
-<p>利用率：U=传输时间/总时间 相对传播时延：a=传播时延/传输时延</p>
-<p><strong>27.分析点对点链路最大信道利用率。</strong></p>
-<p>设传输时延为1，则传播时延为a，此时总时间为 1+a，所以最大利用率为U=1/(1+a)，注意分两种情况：大帧还是小帧</p>
-<p><strong>28.分析令牌环协议的最大信道利用率。</strong></p>
-<p>考虑每次发数据由两种情况组合：发送数据+释放令牌</p>
-<p>假设信道十分繁忙，由于忽略令牌自身的大小，那么其被释放理立即被接受，这个时间为a/N即传播时延的N分之一。</p>
-<p>接下来考虑总时间：如果帧很长，在帧传输完便已经绕了一圈，此时可以发送令牌，因此总时长为1+a/N</p>
-<p>如果帧很短，那么发完包还没接受到，必须等待接收到时再发令牌，因此总时长为a+a/N</p>
-<p>从而令牌环协议的信道利用率为<img src="/pic/image-20210618111304991.png"  style="zoom:20%;" /></p>
-<p><strong>29.简述时隙ALOHA协议的最大信道利用率。</strong></p>
-<p>重传概率为p，因此N个节点存在一个节点重传成功的概率为$Np(1-p)^{N-1}$，数学分析知道当$p=\frac 1N$时该概率最大为$(1-\frac 1N)^{N-1}$。</p>
-<p>成功传输的利用率为$\frac 1{1+2a}-&gt;1$这里的2a是由于碰撞检测导致的。从而最大利用率为$(1-\frac 1N)^{N-1}$极限为$e^{-1}$。</p>
-<p><strong>30.简述普通ALOHA协议的最大信道利用率。</strong></p>
-<p>考虑一个成功重传的包，开始在T，结束在T+1；一个包成功传输的概率=N*p*P(T,T+1无其他包)*P（T-1~T无包传）</p>
-<p>从而$A=Np(1-N)^{2N-1},p=\frac 1{2N}$，从而$U=A-&gt;\frac1{2e}$</p>
-<p><strong>31.CSMA p坚持的简单信道利用率分析模型。</strong></p>
-<p>基本假设：发包有p的概率，从而类似于ALOHA，一个成功发包的概率为$A=(1-\frac 1N)^{N-1}$。</p>
-<p>内容间隔：一个个的内容槽，每个槽大小为2a（直接考虑传播时延）</p>
-<p>考虑有j个槽的内容间隔时间概率为$A(1-A)^j$,j次不成功的发送，1次成功的发送。从而平均内容间隔的大小为$\sum jA(1-A)^j=\frac{1-A}{A}$；</p>
-<p>（这里几何分布均值）。</p>
-<p>$U=\frac {1}{1+a+2a\cdot \frac{1-A}{A}}=\frac{1}{1+(2e-1)a}$ </p>
-<p><strong>32.简述DHCP协议。</strong></p>
-<p>主机用DHCP协议去获得自己的IP地址子网掩码，本地DNS路由器的IP地址，第一跳路由地址。</p>
-<p>类似于4次握手，首先主机广播DHCP-discover，然后所有接受到的DHCP服务器发送DHCP-offer，然后主机选择一个offer，发送DHCP-request，然后DHCP服务器回复ACK。从而成功绑定。如果时间过了的话需要重新绑定，消除绑定，DHCP服务器发送DHCP-release</p>
-<p><strong>34.DHCP软状态又哪些情况？</strong></p>
+                <h1 id="传输层概念问答"><a href="#传输层概念问答" class="headerlink" title="传输层概念问答"></a>传输层概念问答</h1><p><strong>1.为什么需要传输层？</strong></p>
+<p>IP是尽力而为协议，数据包在传输过程中存在损坏延迟重复等，且没有做到流量控制。</p>
+<p><strong>2.什么是运输层的多路复用和多路分解？</strong></p>
+<p>多路复用指从不同用户程序获取并组合数据发送给网络层。</p>
+<p>解多路复用指讲网络层的数据分解并传输给相应的socket。</p>
+<p><strong>3.传输层的作用有哪些？</strong></p>
 <ol>
-<li>主机坏了：停止在主机更新；收回服务</li>
-<li>DHCP服务器坏了：ACK没有了，主机释放地址，寻求其他DHCP服务器</li>
-<li>网络线路故障：主机释放地址；DHCP服务器收回服务</li>
+<li>进程间通信</li>
+<li>提供端到端服务（可选）</li>
+<li>提供TCP/UDP协议 TCP提供可靠的顺序的字节流抽象，UDP为最小传输协议</li>
 </ol>
-<p><strong>35.简述ARP协议。</strong></p>
-<p>发送端：如果要发送包，检查本地的ARP缓存，如果命中则读取相应的目标mac地址；如果没有命中，则发送ARP request（广播）</p>
-<p>接受端：如果自己有cache，则发送ARP reply</p>
-<p><strong>36.网桥的三个要求是什么？</strong></p>
-<p>能够存储转发，采用二层协议；透明的；即插即用，能够自己学习，不需要手动配置</p>
-<p><strong>37.怎么解决广播风暴？</strong></p>
-<p>由于网桥可以做到广播帧，因此若线路有环，会造成广播风暴。</p>
-<p>采用生成树协议，找到链路中的生成树，不在树中的边不转发帧。零配置，自愈合</p>
-<p>方法：1.选取一个根节点（多种方式，如最小地址）2.计算到根节点的最短路径，保留路径上的边进入生成树。</p>
-<p>当有多个最短路径时，选择ID最小的路径。</p>
-<p><strong>38.如何分布式实现生成树协议？</strong></p>
-<p>构造发送的信息(Y,d,X)表示从X点，建议将Y作为根节点，距离为d。选择地址最小的最为根节点。</p>
-<p>初始化：X声称：(X,0,X),把信息发给自己的邻居</p>
-<p>节点更新信息：收到（Y,d,Z），如果Y.id&lt;cur.id，则cu r.id=Y.id；更新最短距离：d+1，发送信息。</p>
-<p><strong>39.生成树协议的鲁棒性如何保证？</strong></p>
-<p>根节点定时发送公告消息，如果一个节点检测到超时，则其声称自己是根节点。</p>
-<p><strong>40.简述地址自学习。</strong></p>
-<p>洪范比较浪费，但是使得节点可以记住转发的端口。因此每个交换机或桥维持一个转发数据库，利用收到包的原地址存储其转发端口以及时间戳。</p>
-<p>当一个包来时，检查目的地址，如果目的地址不在表内，在其他所有端口转发，如果在表内且对应的端口不是源端口则转发到相应端口，否则丢弃包。</p>
-<p><strong>41.二层交换机与网桥的比较。</strong></p>
-<p>网桥连接局域网，通常2-4个端口。交换机连接多个主机和子网，有许多端口，可以做到无碰撞传输。</p>
-<p>与它们不同的是，集线器充当一个网线。</p>
-<p><strong>42.以太网选择二层交换机的好处？</strong></p>
-<p>无需改变原有的线路；与原先的局域网有相同的专用容量；容易扩展扩容</p>
-<p><strong>43.二层交换缺乏多种路径的问题和可能的解决方法？</strong></p>
-<p>由于在二层网络采用生成树协议，此时发包是有唯一路径的。限制了性能和可靠性。</p>
-<p>解决方法：将局域网分解为采用三层路由功能的子网。这样MAC广播仅限于同一个子网。从而允许多条路径。</p>
-<p><strong>44.无线和移动的概念有什么区别？</strong></p>
-<p>无线指采用无线链路，移动指用户改变网络的接入点。</p>
-<p><strong>45.无线网络有哪些要素？</strong></p>
-<p>移动设备连接；主干连接；协调多路访问；传输速率传输距离</p>
-<p><strong>46.无线网络有哪两种模式？</strong></p>
-<p>基础设施模式：移动或固定端连接基站</p>
-<p>自组织模式（ad-hoc）：无基站，节点只能发送数据给覆盖范围内的其他设备，将自己组织成网路，在它们自己间路由</p>
-<p><strong>47.无线网络有哪些分类？</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">单跳</th>
-<th align="center">多跳</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">有基础设备（APs）</td>
-<td align="center">主机连接到设备到更大的网路（WIFI）</td>
-<td align="center">主机需要多个无线设备中继（网状网络）</td>
-</tr>
-<tr>
-<td align="center">无基础设备</td>
-<td align="center">无法连接到更大网络（hoc、蓝牙）</td>
-<td align="center">连接需要多个中继且无法连接到更大网络（MANET、车载VANET）</td>
-</tr>
-</tbody></table>
-<p><strong>48.无线网络（相较有线）有哪些特征？</strong></p>
-<p>1.信号强度随着距离下降:$FSPL=(\frac {4\pi df}{c})^2$</p>
-<p>SNR：信噪比 BER：比特错误率 SNR越大，BER越低；吞吐量越高，误码率越高</p>
-<p>2.多路径传播：反射等</p>
-<p>来自其他源的干扰</p>
-<p><strong>49.简述802.11架构。</strong></p>
-<p>接入点（AP）：提供无线接入</p>
-<p>基本服务集（BSS）:由一个接入点（基站）协调的单个单元格</p>
-<p>扩展服务集（ESS）：由分布式系统（DS）互联的BSS，DS可以是交换机，无线/有线网络；ESS充当一个逻辑局域网，门户为路由器</p>
-<p>体系结构图：</p>
-<img src="/pic/image-20210619000034271.png" style="zoom:30%;" />
+<p><strong>4.什么是socket？</strong></p>
+<p>操作系统对于应用交换信息的接口抽象。表达为&lt;HostIP,Post&gt; </p>
+<p>两种类型：UDP socket:SOCK_DGRAM  TCP socket:  SOCK_STREAM</p>
+<p><strong>5.端口号port是什么？</strong></p>
+<p>帮助区分应用进程16比特数字。操作系统存储sockets和端口号。</p>
+<p>UDP: (local port, local IP address) </p>
+<p>TCP: (local port, local IP, remote port, remote IP) </p>
+<p><strong>6.解多路复用怎么进行？</strong></p>
+<p>读取接受到包的原目的IP地址以及原目的端口号，从而得到socket。</p>
+<p><strong>7.无连接的多路分解怎么进行？</strong></p>
+<p>创建数据包的时候需要指定目的端口和IP，分解时依据该二元组送给相应socket。</p>
+<p><strong>8.面向连接的多路分解怎么进行？</strong></p>
+<p>分解时需要用到四个数据：原目的IP以及端口号。与无连接不同的是，例如web会为每个请求建立相应的端口。</p>
+<p><strong>9.可靠传输需要解决哪些问题？</strong></p>
+<p>包的损毁、丢失、延迟、失序、重复</p>
+<p><strong>10.如何解决数据包损坏？</strong></p>
+<p>数据包正确接收端回复ACK，损坏回复NACK。对于多个数据包回复带有序列号的ACK/NACK</p>
+<p><strong>11.如何解决数据包丢失？</strong></p>
+<p>设定一个timeout。超时重发。</p>
+<p><strong>12.解决可靠传输有哪些组件？</strong></p>
+<p>1.检验和：检测比特错误 2.timeout：解决数据包丢失 3.序列号：解决数据包重复</p>
+<p><strong>13.什么是停止等待协议？</strong></p>
+<p>发送方：收到ack发送下一个数据包，如果收到nack或超时则重发。</p>
+<p><strong>14.停止等待协议低效的原因？</strong></p>
+<p>L表示数据包大小，R表示传输率，两次发送包的间隔时间：RTT+L/R</p>
+<p><strong>15.如何解决停止等待协议低效？</strong></p>
+<p>采用流水线的方式，但需要有重传机制：回退N步（GBN）和选择重传（SR）。吞吐量是min(N*L/R,bandwidth)</p>
+<p><strong>16.描述GBN的执行过程？</strong></p>
+<p>发送方维护一个大小为N的滑动窗口，base指针指向第一个已发送但未接受ack的包，nextseqnum指向第一个待发送的包，如果一个base指向的包收到ack则进1。否则超时重传到nextseqnum。</p>
+<p>接收方采用累计确认，如果已确认了序号k的包，则收到的所有的包均发送ACK k</p>
+<p>，除非收到序号为k+1的包，发送ACK k+1</p>
+<p><strong>17.描述选择重传的执行过程？</strong></p>
+<p>发送方维护一个大小为N的滑动窗口，base指针指向第一个已发送但未接受ack的包，nextseqnum指向第一个待发送的包，并且每个包均维护一个计数器，超时单个包重发。当base指向的包收到ack则进到最近一个未收到包的位置。所有收到ack的包均标记。</p>
+<p>接受方维护一个大小为N的滑动窗口，rcv_base指针指向第一个未ack的包。当收到一个包在rec_base-N~rcv_base-1（即它前面的N个包）必须发送ACK，当在滑动窗口内则发送ACK，并缓存，如果其前面均ack了，rcv_base进到第一个没有ack的包的位置。</p>
+<p><strong>18.比较GBN与SR的优缺点。</strong></p>
+<p>GBN适合在误比特率高的情况之下，否则浪费带宽。SR适合误比特率高的情况，但是比较复杂。</p>
+<p><strong>19.为什么存在UDP？</strong></p>
+<p>因为其无连接建立，简单，头部小，没有拥塞控制，从而尽可能快。</p>
+<p><strong>20.描述UDP的报文头格式</strong>。</p>
+<p>8个字节。2字节源端口号，2字节目的端口号，头部和数据的总长度（字节），检验和。</p>
+<p><strong>21.如何做UDP检验和？</strong></p>
+<p>1.添加伪首部，伪首部仅用来做检验和。</p>
+<p>2.将检验和字段填充全0</p>
+<p>3.在数据末尾填充0至偶数个字节。</p>
+<p>4.每16位相加，注意进位回卷加1.</p>
+<p><strong>22.描述TCP的报文头格式。</strong></p>
+<img src="image-20210613111112243-6706395.png"  style="zoom:40%;" />
 
-<p>划分11个频段；相邻的AP可能有相同的频段。主机选择一个AP，需要身份验证，通过DHCP配置ip。</p>
-<p><strong>50.关联AP有哪些方式？</strong></p>
-<p>被动方式：1.AP发送信标帧 2.主机发送关联请求：request 请求AP；3AP响应</p>
-<p>被动方式：1.主机广播探测请求 2.APs发送探测相应 3主机发送关联请求 4AP响应</p>
-<p><strong>51.多个无线发送端和接受端会造成哪些问题？</strong></p>
-<p>隐藏终端问题：ABC,AB相互听到，BC相互听到，但是AC听不到。</p>
-<p>信号衰弱问题：A-C的信号已经很小了，从而听不到</p>
-<p>暴露终端问题：AB. CD B在传输的过程中时C不会传输，但是CD可以正确传输</p>
-<p><strong>52.如何解决隐藏终端问题？</strong></p>
-<p>使用RTS/CTS；采用4帧交换的方式；源向目的发送RTS(request)帧，目的回复源CTS(clear)帧，源发送数据，目的回复ACK。</p>
-<p>RTS警告源周围的APs，CTS警告目的周围的APs。</p>
-<p><strong>53.简述媒体访问控制的三层优先级？</strong></p>
-<p>MAC:分布式基础无线媒体访问控制</p>
-<p>802.11协议链路层：LLC+MAC层 在MAC层下层DCF（CSMA/CA），上层PCF(点协调功能)提供非竞争服务。</p>
-<p>SIFS：短帧间间隔，最高优先级，对所有回复帧</p>
-<p>PIFS:点协调帧间间隔，次优先级，</p>
-<p>DIFS：分布式帧间间隔，最长帧，用于其他异步帧竞争接入。</p>
-<p><strong>54.简述PCF。</strong></p>
-<p>AP充当点协调控制器，轮询接入点，此时是竞争避免的，接入点采用NAV方式避免冲突。</p>
-<p>PCF是可选的，在DCF之上，在一个超级帧内，前半部分为PCF，后半部分允许竞争为DCF。</p>
-<p>当轮询发出时，以SIFS响应。当轮询结束或无响应时，采用PIFS后再轮询。</p>
-<p><strong>55.SIFS适用哪些情况？</strong></p>
-<p>ACK答复，发送多个LLC PDU的非第一帧；轮询响应；CTS</p>
-<p><strong>56.简述802.11中的CSMA/CA?</strong></p>
-<p>由于无线网络不好检测出碰撞，采用避免碰撞的CSMA协议。</p>
-<p>Basic:</p>
-<p>发送端：</p>
-<p>1如果信道空闲等待一个DIFS若空闲，则发送全部数据。</p>
-<p>2忙则随机回退时间，计时器在空闲时工作，忙则不工作。</p>
-<p>3计时器清零，此时一定空闲，发数据。</p>
-<p>4收不到ACK，随机回退转2</p>
-<p>接受端：校验正确后，等待SIFS发送ACK</p>
-<p>RTS/CTS模式：</p>
-<p>采用CSMA的方式发送RTS，回复广播CTS；(52) 解决隐藏终端问题</p>
-<p><strong>57.描述802.11帧格式。</strong></p>
-<img src="/pic/image-20210619105501218.png" style="zoom:20%;" />
+<p><strong>23.TCP报文段的最大长度是多少？</strong></p>
+<p>由于以太网最大传输单元MTU=1500字节，因此最大报文段大小MSS=MTU-size(IPheader)-size(TCP header)&lt;1460字节</p>
+<p><strong>24.TCP中序列号和确认号是做什么的？</strong></p>
+<p>TCP中序列号单位是字节数，如果一个包序列号为X，其数据有B字节，则它下一个包为X+B</p>
+<p>当接收方收到该包时，判断当前已经收到的包最大序列Y，如果Y+1&lt;X则ACK:Y+1</p>
+<p>如果所有先于X的数据均被收到则ACK：X+B</p>
+<p>可以看到TCP协议时累积ACK的。</p>
+<p><strong>25.重传的timeout如何设定？</strong></p>
+<p>不能够太长否则降低吞吐量，不能太短否则包还没收到就超时了。解决方案是使得timeout与RTT一致。因此我们需要有效的估计RTT。采用指数加权平均的方式，采样得到sampleRTT,有estimatedRTT=(1-a)*estimatedRTT+a*sampleRTT，a推荐的值为0.125。为了获得准确的sampleRTT（而非重传导致的不准确RTT），选取没有重传过的包进行采样。</p>
+<p>Karn/Partridge 算法：RTO=2*estimatedRTT，如果超时RTO加倍，每次有新的测量则RTO=2*etimatedRTT</p>
+<p>Jacobson/Karels 算法：考虑RTT的波动，记偏差为|sampleRTT-estiamtedRTT|</p>
+<p>因此估算偏离程度DevRTT=(1-b)*DevRTT+b*|sampleRTT-estiamtedRTT|这里b的值通常取0.25。从而设置RTO=EstimatedRTT+4*DevRTT;如果超时RTO加倍，每次有新的测量则RTO=EstimatedRTT+4*DevRTT</p>
+<p><strong>26.什么情况下会发送快速重传？</strong></p>
+<p>当出现3次冗余ACK时，这表明收到的序列号的数据可能丢失了。</p>
+<p><strong>27.TCP是GBN还是SR?</strong></p>
+<p>TCP维持了sendBase和nextseqnum，具有GBN风格，但是每次重传只重传1个包并且TCP会将正确接受但失序的包缓存起来。是GBN和SR的混合体。</p>
+<p><strong>28.两次握手为什么不能进行TCP连接？</strong></p>
+<p>无法处理旧连接中滑过的片段，无法识别重复过时的SYN</p>
+<p><strong>29.简单描述三次握手TCP连接建立。</strong></p>
+<p>第一步：A随机产生序列号x，发送SYN seq=x。</p>
+<p>第二步：B随机产生序列号y，发送SYN|ACK seq=y ack=x+1</p>
+<p>第三步：A发送 ACK seq=x+1, ack=y+1</p>
+<p><strong>30.TCP如何连接释放？</strong></p>
+<p>第一步：A：FIN seq=u</p>
+<p>第二步：B：ACK seq=v ack=u+1 此时A-B连接已经关闭</p>
+<p>第三步：B：等待数据传完了 FIN seq=w ack=u+1</p>
+<p>第四步：A: ACK seq=u+1 ack=w+1</p>
+<p><strong>31.TCP如何实现流量控制？</strong></p>
+<p>利用头部字段advertised window,值rwnd=buffersize-(lastrcv-lastread)表示发送端还可以发送的数据大小。</p>
+<p>当rwnd=0出现死锁，解决方法是利用超时。</p>
+<p><strong>32.TCP拥塞控制需要注意哪三个重要问题？</strong></p>
+<ol>
+<li>瓶颈带宽的发现</li>
+<li>调整以适应带宽的变化</li>
+<li>数据流之间共享带宽</li>
+</ol>
+<p><strong>33.端如何检测拥塞？</strong></p>
+<p>TCP采用包的丢失来判断网络拥塞，具体总共有两种情况，一个是重复ACK（例如三次重复ACK）和超时（更加严重）</p>
+<p><strong>34.TCP如何做到拥塞控制（初级）？</strong></p>
+<p>TCP维护一拥塞窗口cwnd，发送窗口=min(cwnd,rwnd)。采用慢开始和拥塞避免的算法。</p>
+<p>慢开始：初始情况cwnd=1,每次成功收到cwnd翻倍。即每个ack加一。</p>
+<p>慢开始的停止：设置一个大阈值ssthresh但无法做到调整以适应带宽的变化，所以TCP采用AIMD（加性增乘性减）</p>
+<p>AIMD：add每次加1；三次重复ACK：减半并重新AIMD；超时：归1并恢复慢开始；两种减ssthresh都设置CWND/2</p>
+<p><strong>35.TCP为什么采用AIMD？</strong></p>
+<p>为了保证共享带宽做到有效和公平。AIAD/MIMD无法做到公平，MIAD无法做到公平和有效。</p>
+<p><strong>36.TCP拥塞控制的快速恢复是什么？</strong></p>
+<p>收到重复ack的时候，cwnd不增加，将3次重复ack视作一个整体，此时ssthresh = CWND/2；CWND = ssthresh + 3；进入快速恢复，此时指数增长：每个ack cwnd+=1；当新的ack来到时退出快速增长，cwnd=ssthresh</p>
+<p><strong>37.描述TCP拥塞控制状态机</strong></p>
+<img src="image-20210614225316372-6706395.png"  style="zoom:20%;" />
 
-<p>duration:时间 地址1:目的AP或主机 地址2:源AP或主机 地址3：连接到AP的路由器mac地址。地址4：在自组织网络使用</p>
-<p>地址三为了告知AP发包给谁。</p>
-<p><strong>58.802.11如何做到节能？</strong></p>
-<p>主机休眠直到收到信标帧。</p>
-<p><strong>59.简述蜂窝网络。</strong></p>
-<p>采用多种信道划分协议，2G网络适用语言电话，3G网络适用因特网。</p>
-<p>3G:无线电接入网—核心网—英特网</p>
-<p>​                            ～电话网</p>
-<p>2G:基站系统—–电话网</p>
+<p><strong>38.TCP连接吞吐量公式以及其推导。</strong></p>
+<p>假设在拥塞避免阶段cwnd从w/2涨到w，共发送了$A=\frac 38W^2$个包，丢包率$p=\frac 1A$，所消耗的时间$T=\frac 12 W\cdot RTT$。所以最终的吞吐量为$\frac AT=\sqrt{\frac{3}{2}}\frac{1}{RTT\sqrt p}$，可以看出RTT越大，吞吐量越小，丢包率越大，吞吐量越小。这个式子有如下几点含义：</p>
+<ol>
+<li>不同链路RTT不同，TCP吞吐量不同，即造成“不公平”</li>
+<li>TCP的速度很快</li>
+<li>可以采用方程式拥塞控制，基于上述公式进行拥塞控制</li>
+<li>如果出现丢包不是由于拥塞的情况，这会导致吞吐量的下降</li>
+<li>比较短的数据无法离开慢开始，从而对短数据不公平，且容易造成高延迟。</li>
+<li>端系统作弊：修改cwnd的起始大小/每次增加不止1/开多个TCP</li>
+</ol>
+<p><strong>39.TCP拥塞控制有哪些问题？</strong></p>
+<ol>
+<li>非拥塞的损失</li>
+<li>排满队列导致高延迟</li>
+<li>短流离开不了慢开始</li>
+<li>AIMD在高速链路不太适合</li>
+<li>不同RTT不公平</li>
+<li>锯齿对于某些应用来说太不稳定了</li>
+<li>与机器结合且可以作弊</li>
+</ol>
+<p><strong>40.路由拥塞控制有哪些方法？</strong></p>
+<ol>
+<li>抑制分组（包）</li>
+<li>反压</li>
+<li>警告位</li>
+<li>随机早期丢弃</li>
+<li>公平队列</li>
+</ol>
+<p><strong>41.描述抑制分组。</strong></p>
+<p>在拥塞的路由节点处为每一个丢弃的包生成抑制分组，发送给源节点，利用ICMP。</p>
+<p><strong>42.描述反压/背压。</strong></p>
+<p>当传播时延大于传输时延的时候，拥塞点到源的抑制分组无效，需要回去的每一跳路由都减少传输的流量。</p>
+<p><strong>43.描述警告位。</strong></p>
+<p>是包头部的一个比特位，由拥塞路由设置，如果数据包有该警告位，则ACK也要有该警告位；端系统权衡利用率和时延。</p>
+<p>好处：1不会混淆拥塞包损坏 2可以作为拥塞的早期指标 3很容易逐步部署</p>
+<p><strong>44.描述随机早期丢弃</strong>。</p>
+<p>路由器在缓冲区还未满的时候随机以解决TCP的同步问题（锯齿状）；计算平均队列长度：avgLen = (1−ω)×avgLen+ω×sampleLen；这种方式类似于RTT的估计。设定两个阈值THmax，THmin,，如果avgLen小于THmin，则直接入队列，如果介于中间则选择概率p丢弃，如果大于THmax，则直接丢弃。</p>
+<p><strong>45.描述最大最小公平。</strong></p>
+<ol>
+<li>资源按照需求递增的顺序进行分配；</li>
+<li>不存在用户获得的资源超过自身的需求；</li>
+<li>对于未满足的用户，等价分享剩余资源；</li>
+</ol>
+<p>算法描述：首先假定用户集合有n个用户，1到n，他们对资源的需求已经排序完毕，满足s1&lt;s2&lt; …. &lt;sn，资源总量为S。</p>
+<ol>
+<li>   将资源S/n分配给需求最小的1用户，这很可能已经超出了用户1的需求；</li>
+<li>   将超出的部分回收，再次将(S-s1)/(n-1)的资源分配给用户2，依次次重复上述过程，直到某一次分给该用户的资源不满足该用户的需求</li>
+</ol>
+<p>数学表达：ai = min(f, ri)  满足 Sum(ai ) = C   </p>
+<p>例子：C=10 a1=8, a2=2, a3=6 ;N=3；C/N&gt;a2 =&gt; C=8 a1=8, a3=6 N=2；C/N&lt;a3 =&gt; 均分 f=C/N=4 </p>
+<p>含义：“如果你没有得到充分的需求，没有人比你得到的更多。”</p>
+<p><strong>46.描述公平队列。</strong></p>
+<p>对于每个数据包，计算其最后一位离开路由器的时间，然后按照截止时间的递增顺序提供服务。</p>
+<p>例子：这里可以看到当11，23到的时候预计1会先结束，那么取1的包。</p>
+<img src="image-20210719225530403.png"  style="zoom: 20%;" />
+
+<img src="image-20210617135548230-6706395.png"  style="zoom:20%;" />
+
+<p>好处：作弊的TCP流没好处；带宽分享不取决于TTL；</p>
+<p>FQ没有消除拥塞，而在管理拥塞。</p>
 
                 
             </div>
@@ -749,7 +696,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://njuyxw.github.io/2021/07/19/lian-lu-ceng-fu-xi/">http://njuyxw.github.io/2021/07/19/lian-lu-ceng-fu-xi/</a>
+                    <a href="http://njuyxw.github.io/2021/07/19/chuan-shu-ceng-fu-xi/">http://njuyxw.github.io/2021/07/19/chuan-shu-ceng-fu-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -958,13 +905,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/19/wang-luo-ceng-fu-xi/">
+                <a href="/2021/07/19/qos-yi-ji-xu-lun-fu-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="网络层复习">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Qos以及绪论复习">
                         
-                        <span class="card-title">网络层复习</span>
+                        <span class="card-title">Qos以及绪论复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -996,16 +943,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/19/lian-lu-ceng-fu-xi/">
+                <a href="/2021/07/19/wang-luo-ceng-fu-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="链路层复习">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="网络层复习">
                         
-                        <span class="card-title">链路层复习</span>
+                        <span class="card-title">网络层复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1030,7 +977,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

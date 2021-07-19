@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链路层复习, njuyxw&#39;s homepage">
+    <meta name="keywords" content="网络安全复习, njuyxw&#39;s homepage">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链路层复习 | njuyxw&#39;s homepage</title>
+    <title>网络安全复习 | njuyxw&#39;s homepage</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链路层复习</h1>
+                    <h1 class="description center-align post-title">网络安全复习</h1>
                 </div>
             </div>
         </div>
@@ -501,228 +501,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="链路层概念问答"><a href="#链路层概念问答" class="headerlink" title="链路层概念问答"></a>链路层概念问答</h1><p><strong>1.链路层服务有哪些？</strong></p>
-<p>封装成帧；链路访问；可靠传输；差错控制</p>
-<p><strong>2.有哪些链路类型？</strong></p>
-<p>点对点有线链路；多路访问有线链路（广播链路）；无线链路</p>
-<p><strong>3.描述多路访问控制的原因。</strong></p>
-<p>共享一个广播信道，从而必须避免同时“说话”，否则会导致冲突。</p>
-<p><strong>4.多路访问控制协议有哪三个技术？</strong></p>
-<p>信道划分；轮询访问；随机接入</p>
-<p><strong>5.描述如何做(奇)偶校验。</strong></p>
-<p>一维：一个校验位保证有偶数个1。 可以检测出1-bit的错误</p>
-<p>二维：给出一个bit方阵，对每一行每一列做偶校验，可以检测并纠正出1-bit错误，可以检测出2-bit错误。</p>
-<p><strong>6.描述CRC循环冗余码如何工作？</strong></p>
-<p>D:数据；r：阶；G：生成多项式 最高阶为r</p>
-<p>最终的校验位为R=(D&lt;&lt;r)/G的余数，r位。最终传输的结果位D:R。注意这里的除法是循环移位模2运算，每次减是做异或。</p>
-<img src="/pic/image-1.png"  style="zoom:20%;" />
+                <h1 id="网络安全概念问答"><a href="#网络安全概念问答" class="headerlink" title="网络安全概念问答"></a>网络安全概念问答</h1><p><strong>1.网络攻击有哪些类型？</strong></p>
+<p>打断；窃听；修改；伪装</p>
+<p>被动攻击：窃听流量或包，难以检测但是可以避免</p>
+<p>主动攻击：假装，拦截修改包，难以预防但是可以检测</p>
+<p>网络安全要求：可获得的；保密的；完整的；真实的</p>
+<p><strong>2.网络安全的措施。</strong></p>
+<p>加密；报文鉴别码（报文无法被更改）；标志（报文无法伪造）</p>
+<p><strong>3.对称加密技术。</strong></p>
+<p>共享同一个密钥$K_{A_B}$，是对称的。</p>
+<p>要求：强大的加密算法；发送方和接收方必须安全地获得密钥 - 密钥分配</p>
+<p>加密算法：</p>
+<p>经典算法：凯撒密码、Mono-alphabetic密码、维吉内·密码（Vigenere Cipher）、篱笆密码、Row-Column密码</p>
+<p>现代算法：块加密：DES（数据加密标准）、3DES、AES（高级加密标准）</p>
+<p><strong>4.破解办法有哪些？</strong></p>
+<ul>
+<li>唯密文攻击</li>
+<li>已知明文攻击（当入侵者知道（明文，密文）的一些匹配时）</li>
+<li>选择明文攻击（入侵者能够选择某一明文报文并得到该明文报文所对应的密文形式）</li>
+</ul>
+<p><strong>5.RSA密钥生成的过程。</strong></p>
+<p>见课本</p>
+<p><strong>6.报文鉴别码。（MAC）</strong></p>
+<p>共享密钥s，报文m，生成（H(s,m)）与m一起发送。</p>
+<p>MD5—–SHA-1</p>
+<p><strong>7.数字签名。</strong></p>
+<p>见课本</p>
+<p><strong>8.Diffie-Hellman算法。</strong></p>
+<p>见课本</p>
+<p><strong>9.一次一密会话密钥</strong></p>
+<p>认证之后，一方提供会话密钥，用另一方的公钥加密。</p>
+<p><strong>10.安全电子邮箱。</strong></p>
+<p>利用会话密钥</p>
+<p>①A选择一个随机对称会话密钥 ②用这个对称密钥加密她的报文 ，③用B的公钥加密这个对称密钥</p>
+<p>④级联该加密的报文和加密的对称密钥形成一个包；⑤然后向B的电子邮件发送这个包；</p>
+<p>B收到后：①他使用其私钥得到对称密钥，这样就可以解读 了。</p>
+<p>报文机密性+身份鉴别</p>
+<img src="image-20210628150843514.png"  style="zoom:33%;" />
 
-<p><strong>7.描述令牌环局域网。</strong></p>
-<p>来自标准802.5。链路成一个单向环，连接了每个中继器，中继器另一端连到主机（附属端）。</p>
-<p>接受状态：扫描bit流寻找匹配，如果目的地址匹配则发送给附属端，否则修改相应bit位并转发。</p>
-<p>发送状态：回收帧并发送给附属端检查，可能缓冲其他帧以便重发。</p>
-<p>进过状态：相当于一条线。</p>
-<p>在环中维持一个令牌，当某个点要发送数据的时候，收回该令牌，发送数据，绕一圈过后销毁数据，释放令牌。</p>
-<p><strong>8.描述旧以太网在结构上和当前以太网的区别。</strong></p>
-<p>旧以太网采用广播链路，总线型，需要用到CSMA/CD协议；当前以太网采用链路层交换机，采用自学习或最小生成树算法进行路由。</p>
-<p><strong>9.以太网的两个基本特征？</strong></p>
-<p>无连接，不可靠。</p>
-<p><strong>10.简要描述以太网帧格式。</strong></p>
-<img src="/pic/image-20210617165108944.png"  style="zoom:30%;" />
-
-<p>Preamble：7字节用来时间同步，1bit用来表明帧的开始</p>
-<p>地址：6 字节；类型：2字节 表示高层协议；CRC：4字节，循环冗余校验码；数据最大1500字节，最小46字节；地址为MAC地址，48比特。全球唯一。</p>
-<p><strong>11.封装成帧有哪些方法？</strong></p>
-<p>成帧的核心问题：如何判断帧的开始和结束。</p>
-<p>简单方法：计数字节；头部表示还有多少内容；但是出错会产生问题。</p>
-<p>填充哨兵比特：如01111110 作为开始, 01111111作为结束；为了解决该bit在数据内部有，解决方法：数据部分每五个1加一个0</p>
-<p><strong>12.理想的多路访问控制有什么要求？</strong></p>
-<p>一个节点有R的传输速率，n个节点有R/n个传输速率；去中心化；简单化</p>
-<p><strong>13.简述信道划分协议。</strong></p>
-<p>TDMA：划分帧，每一帧分时隙分给固定的工作站。</p>
-<p>FDMA：频分复用，划分频率</p>
-<p>CDMA：每个站点维持一个code，保证code们相互正交。编码：如果是1发code，0发code的反。发送：将所有信息相加</p>
-<p>分解：将最终结果点乘相应站点的code，结果除以code的大小。</p>
-<p><strong>14.简述轮询访问协议。</strong></p>
-<p>轮询协议：主节点轮询“邀请”从节点传输。  （蓝牙）</p>
-<p>缺点：轮询开销；时延；单点故障</p>
-<p>令牌环协议：令牌开销；时延；单点故障</p>
-<p><strong>15.随机接入协议有哪些？</strong></p>
-<p>ALOHA/时隙ALOHA；CSMA CD CA (1坚持，非坚持，p坚持)</p>
-<p><strong>16.随机接入协议要解决哪两个关键问题？</strong></p>
-<p>如何检测或者避免碰撞；如何从碰撞事件中恢复</p>
-<p><strong>17.描述ALOHA协议。</strong></p>
-<p>ALOHA:不监听信道；接受端：如果收到ack，以p的概率重发，1-p概率等待，没有则放弃；发送端：帧无错发送ack</p>
-<p>时隙ALOHA：对时间划分时隙，每个时隙等于帧的传输时间，如果没有碰撞，在下一个时隙发包，如果碰撞了在接下来的时隙以p的概率重发。</p>
-<p><strong>18.简述CSMA载波侦听多路访问的主要思想。</strong></p>
-<p>在传输之前侦听信道，空闲则发包，忙则等待。但是无法消除碰撞，由于传播时延。</p>
-<p><strong>19.简述非坚持CSMA。</strong></p>
-<p>1.如果空闲，则发包。</p>
-<p>2.如果忙则等待一段时间再监听重复1。</p>
-<p><strong>20.简述1坚持CSMA。</strong></p>
-<p>1.如果空闲则发包。</p>
-<p>2.如果忙则一直侦听直到空闲为止，然后立即发包。</p>
-<p><strong>21.简述p坚持CSMA。</strong></p>
-<p>1.如果空闲，则以p的概率发送，1-p的概率延迟一个时间单元（最大传播时延）发送。</p>
-<p>2.如果忙，监听直到空闲重复1</p>
-<p>3.如果传输延迟了1个时间单元则重复1</p>
-<p><strong>22.简述CSMA/CD。</strong></p>
-<p>1.如果空闲，则发送。</p>
-<p>2.如果忙则一直侦听直到空闲，立即发送。</p>
-<p>3.如果检测到了碰撞，则发送Jam信号（连续几个字节全1的信号），终止。</p>
-<p>4.发送jam之后，等待随机的时间转1</p>
-<p><strong>23.CSMA要求的最小帧长如何推导？</strong></p>
-<p>B：宽；L：长；V:传播速率</p>
-<p>S/B&gt;2<em>T=2</em>L/V =&gt; S&gt;*L*B/V</p>
-<p><strong>24.随机接入的三个要素是什么？</strong></p>
-<p>载波侦听、碰撞检测、随机性</p>
-<p><strong>25.描述完整的CSMA/CD协议。</strong></p>
-<img src="/pic/image-20210618103854981.png"  style="zoom:25%;" />
-
-<p>802.3协议。这里要注意帧间间隔，以及延迟的时间为512*Rbit时间。二进制指数后退算法注意N=15，10两个分界点。</p>
-<p><strong>26.有哪些用来衡量mac协议的准则？</strong></p>
-<p>利用率：U=传输时间/总时间 相对传播时延：a=传播时延/传输时延</p>
-<p><strong>27.分析点对点链路最大信道利用率。</strong></p>
-<p>设传输时延为1，则传播时延为a，此时总时间为 1+a，所以最大利用率为U=1/(1+a)，注意分两种情况：大帧还是小帧</p>
-<p><strong>28.分析令牌环协议的最大信道利用率。</strong></p>
-<p>考虑每次发数据由两种情况组合：发送数据+释放令牌</p>
-<p>假设信道十分繁忙，由于忽略令牌自身的大小，那么其被释放理立即被接受，这个时间为a/N即传播时延的N分之一。</p>
-<p>接下来考虑总时间：如果帧很长，在帧传输完便已经绕了一圈，此时可以发送令牌，因此总时长为1+a/N</p>
-<p>如果帧很短，那么发完包还没接受到，必须等待接收到时再发令牌，因此总时长为a+a/N</p>
-<p>从而令牌环协议的信道利用率为<img src="/pic/image-20210618111304991.png"  style="zoom:20%;" /></p>
-<p><strong>29.简述时隙ALOHA协议的最大信道利用率。</strong></p>
-<p>重传概率为p，因此N个节点存在一个节点重传成功的概率为$Np(1-p)^{N-1}$，数学分析知道当$p=\frac 1N$时该概率最大为$(1-\frac 1N)^{N-1}$。</p>
-<p>成功传输的利用率为$\frac 1{1+2a}-&gt;1$这里的2a是由于碰撞检测导致的。从而最大利用率为$(1-\frac 1N)^{N-1}$极限为$e^{-1}$。</p>
-<p><strong>30.简述普通ALOHA协议的最大信道利用率。</strong></p>
-<p>考虑一个成功重传的包，开始在T，结束在T+1；一个包成功传输的概率=N*p*P(T,T+1无其他包)*P（T-1~T无包传）</p>
-<p>从而$A=Np(1-N)^{2N-1},p=\frac 1{2N}$，从而$U=A-&gt;\frac1{2e}$</p>
-<p><strong>31.CSMA p坚持的简单信道利用率分析模型。</strong></p>
-<p>基本假设：发包有p的概率，从而类似于ALOHA，一个成功发包的概率为$A=(1-\frac 1N)^{N-1}$。</p>
-<p>内容间隔：一个个的内容槽，每个槽大小为2a（直接考虑传播时延）</p>
-<p>考虑有j个槽的内容间隔时间概率为$A(1-A)^j$,j次不成功的发送，1次成功的发送。从而平均内容间隔的大小为$\sum jA(1-A)^j=\frac{1-A}{A}$；</p>
-<p>（这里几何分布均值）。</p>
-<p>$U=\frac {1}{1+a+2a\cdot \frac{1-A}{A}}=\frac{1}{1+(2e-1)a}$ </p>
-<p><strong>32.简述DHCP协议。</strong></p>
-<p>主机用DHCP协议去获得自己的IP地址子网掩码，本地DNS路由器的IP地址，第一跳路由地址。</p>
-<p>类似于4次握手，首先主机广播DHCP-discover，然后所有接受到的DHCP服务器发送DHCP-offer，然后主机选择一个offer，发送DHCP-request，然后DHCP服务器回复ACK。从而成功绑定。如果时间过了的话需要重新绑定，消除绑定，DHCP服务器发送DHCP-release</p>
-<p><strong>34.DHCP软状态又哪些情况？</strong></p>
-<ol>
-<li>主机坏了：停止在主机更新；收回服务</li>
-<li>DHCP服务器坏了：ACK没有了，主机释放地址，寻求其他DHCP服务器</li>
-<li>网络线路故障：主机释放地址；DHCP服务器收回服务</li>
-</ol>
-<p><strong>35.简述ARP协议。</strong></p>
-<p>发送端：如果要发送包，检查本地的ARP缓存，如果命中则读取相应的目标mac地址；如果没有命中，则发送ARP request（广播）</p>
-<p>接受端：如果自己有cache，则发送ARP reply</p>
-<p><strong>36.网桥的三个要求是什么？</strong></p>
-<p>能够存储转发，采用二层协议；透明的；即插即用，能够自己学习，不需要手动配置</p>
-<p><strong>37.怎么解决广播风暴？</strong></p>
-<p>由于网桥可以做到广播帧，因此若线路有环，会造成广播风暴。</p>
-<p>采用生成树协议，找到链路中的生成树，不在树中的边不转发帧。零配置，自愈合</p>
-<p>方法：1.选取一个根节点（多种方式，如最小地址）2.计算到根节点的最短路径，保留路径上的边进入生成树。</p>
-<p>当有多个最短路径时，选择ID最小的路径。</p>
-<p><strong>38.如何分布式实现生成树协议？</strong></p>
-<p>构造发送的信息(Y,d,X)表示从X点，建议将Y作为根节点，距离为d。选择地址最小的最为根节点。</p>
-<p>初始化：X声称：(X,0,X),把信息发给自己的邻居</p>
-<p>节点更新信息：收到（Y,d,Z），如果Y.id&lt;cur.id，则cu r.id=Y.id；更新最短距离：d+1，发送信息。</p>
-<p><strong>39.生成树协议的鲁棒性如何保证？</strong></p>
-<p>根节点定时发送公告消息，如果一个节点检测到超时，则其声称自己是根节点。</p>
-<p><strong>40.简述地址自学习。</strong></p>
-<p>洪范比较浪费，但是使得节点可以记住转发的端口。因此每个交换机或桥维持一个转发数据库，利用收到包的原地址存储其转发端口以及时间戳。</p>
-<p>当一个包来时，检查目的地址，如果目的地址不在表内，在其他所有端口转发，如果在表内且对应的端口不是源端口则转发到相应端口，否则丢弃包。</p>
-<p><strong>41.二层交换机与网桥的比较。</strong></p>
-<p>网桥连接局域网，通常2-4个端口。交换机连接多个主机和子网，有许多端口，可以做到无碰撞传输。</p>
-<p>与它们不同的是，集线器充当一个网线。</p>
-<p><strong>42.以太网选择二层交换机的好处？</strong></p>
-<p>无需改变原有的线路；与原先的局域网有相同的专用容量；容易扩展扩容</p>
-<p><strong>43.二层交换缺乏多种路径的问题和可能的解决方法？</strong></p>
-<p>由于在二层网络采用生成树协议，此时发包是有唯一路径的。限制了性能和可靠性。</p>
-<p>解决方法：将局域网分解为采用三层路由功能的子网。这样MAC广播仅限于同一个子网。从而允许多条路径。</p>
-<p><strong>44.无线和移动的概念有什么区别？</strong></p>
-<p>无线指采用无线链路，移动指用户改变网络的接入点。</p>
-<p><strong>45.无线网络有哪些要素？</strong></p>
-<p>移动设备连接；主干连接；协调多路访问；传输速率传输距离</p>
-<p><strong>46.无线网络有哪两种模式？</strong></p>
-<p>基础设施模式：移动或固定端连接基站</p>
-<p>自组织模式（ad-hoc）：无基站，节点只能发送数据给覆盖范围内的其他设备，将自己组织成网路，在它们自己间路由</p>
-<p><strong>47.无线网络有哪些分类？</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">单跳</th>
-<th align="center">多跳</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">有基础设备（APs）</td>
-<td align="center">主机连接到设备到更大的网路（WIFI）</td>
-<td align="center">主机需要多个无线设备中继（网状网络）</td>
-</tr>
-<tr>
-<td align="center">无基础设备</td>
-<td align="center">无法连接到更大网络（hoc、蓝牙）</td>
-<td align="center">连接需要多个中继且无法连接到更大网络（MANET、车载VANET）</td>
-</tr>
-</tbody></table>
-<p><strong>48.无线网络（相较有线）有哪些特征？</strong></p>
-<p>1.信号强度随着距离下降:$FSPL=(\frac {4\pi df}{c})^2$</p>
-<p>SNR：信噪比 BER：比特错误率 SNR越大，BER越低；吞吐量越高，误码率越高</p>
-<p>2.多路径传播：反射等</p>
-<p>来自其他源的干扰</p>
-<p><strong>49.简述802.11架构。</strong></p>
-<p>接入点（AP）：提供无线接入</p>
-<p>基本服务集（BSS）:由一个接入点（基站）协调的单个单元格</p>
-<p>扩展服务集（ESS）：由分布式系统（DS）互联的BSS，DS可以是交换机，无线/有线网络；ESS充当一个逻辑局域网，门户为路由器</p>
-<p>体系结构图：</p>
-<img src="/pic/image-20210619000034271.png" style="zoom:30%;" />
-
-<p>划分11个频段；相邻的AP可能有相同的频段。主机选择一个AP，需要身份验证，通过DHCP配置ip。</p>
-<p><strong>50.关联AP有哪些方式？</strong></p>
-<p>被动方式：1.AP发送信标帧 2.主机发送关联请求：request 请求AP；3AP响应</p>
-<p>被动方式：1.主机广播探测请求 2.APs发送探测相应 3主机发送关联请求 4AP响应</p>
-<p><strong>51.多个无线发送端和接受端会造成哪些问题？</strong></p>
-<p>隐藏终端问题：ABC,AB相互听到，BC相互听到，但是AC听不到。</p>
-<p>信号衰弱问题：A-C的信号已经很小了，从而听不到</p>
-<p>暴露终端问题：AB. CD B在传输的过程中时C不会传输，但是CD可以正确传输</p>
-<p><strong>52.如何解决隐藏终端问题？</strong></p>
-<p>使用RTS/CTS；采用4帧交换的方式；源向目的发送RTS(request)帧，目的回复源CTS(clear)帧，源发送数据，目的回复ACK。</p>
-<p>RTS警告源周围的APs，CTS警告目的周围的APs。</p>
-<p><strong>53.简述媒体访问控制的三层优先级？</strong></p>
-<p>MAC:分布式基础无线媒体访问控制</p>
-<p>802.11协议链路层：LLC+MAC层 在MAC层下层DCF（CSMA/CA），上层PCF(点协调功能)提供非竞争服务。</p>
-<p>SIFS：短帧间间隔，最高优先级，对所有回复帧</p>
-<p>PIFS:点协调帧间间隔，次优先级，</p>
-<p>DIFS：分布式帧间间隔，最长帧，用于其他异步帧竞争接入。</p>
-<p><strong>54.简述PCF。</strong></p>
-<p>AP充当点协调控制器，轮询接入点，此时是竞争避免的，接入点采用NAV方式避免冲突。</p>
-<p>PCF是可选的，在DCF之上，在一个超级帧内，前半部分为PCF，后半部分允许竞争为DCF。</p>
-<p>当轮询发出时，以SIFS响应。当轮询结束或无响应时，采用PIFS后再轮询。</p>
-<p><strong>55.SIFS适用哪些情况？</strong></p>
-<p>ACK答复，发送多个LLC PDU的非第一帧；轮询响应；CTS</p>
-<p><strong>56.简述802.11中的CSMA/CA?</strong></p>
-<p>由于无线网络不好检测出碰撞，采用避免碰撞的CSMA协议。</p>
-<p>Basic:</p>
-<p>发送端：</p>
-<p>1如果信道空闲等待一个DIFS若空闲，则发送全部数据。</p>
-<p>2忙则随机回退时间，计时器在空闲时工作，忙则不工作。</p>
-<p>3计时器清零，此时一定空闲，发数据。</p>
-<p>4收不到ACK，随机回退转2</p>
-<p>接受端：校验正确后，等待SIFS发送ACK</p>
-<p>RTS/CTS模式：</p>
-<p>采用CSMA的方式发送RTS，回复广播CTS；(52) 解决隐藏终端问题</p>
-<p><strong>57.描述802.11帧格式。</strong></p>
-<img src="/pic/image-20210619105501218.png" style="zoom:20%;" />
-
-<p>duration:时间 地址1:目的AP或主机 地址2:源AP或主机 地址3：连接到AP的路由器mac地址。地址4：在自组织网络使用</p>
-<p>地址三为了告知AP发包给谁。</p>
-<p><strong>58.802.11如何做到节能？</strong></p>
-<p>主机休眠直到收到信标帧。</p>
-<p><strong>59.简述蜂窝网络。</strong></p>
-<p>采用多种信道划分协议，2G网络适用语言电话，3G网络适用因特网。</p>
-<p>3G:无线电接入网—核心网—英特网</p>
-<p>​                            ～电话网</p>
-<p>2G:基站系统—–电话网</p>
 
                 
             </div>
@@ -749,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://njuyxw.github.io/2021/07/19/lian-lu-ceng-fu-xi/">http://njuyxw.github.io/2021/07/19/lian-lu-ceng-fu-xi/</a>
+                    <a href="http://njuyxw.github.io/2021/07/19/wang-luo-an-quan-fu-xi/">http://njuyxw.github.io/2021/07/19/wang-luo-an-quan-fu-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -954,58 +770,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/19/wang-luo-ceng-fu-xi/">
+                <a href="/2021/07/19/wang-luo-an-quan-fu-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="网络层复习">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="网络安全复习">
                         
-                        <span class="card-title">网络层复习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/19/lian-lu-ceng-fu-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="链路层复习">
-                        
-                        <span class="card-title">链路层复习</span>
+                        <span class="card-title">网络安全复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1031,6 +807,47 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/19/qos-yi-ji-xu-lun-fu-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Qos以及绪论复习">
+                        
+                        <span class="card-title">Qos以及绪论复习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>
