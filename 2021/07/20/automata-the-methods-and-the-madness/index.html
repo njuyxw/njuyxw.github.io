@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络安全复习, njuyxw&#39;s homepage">
+    <meta name="keywords" content="Automata: The methods and the madness, njuyxw&#39;s homepage">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络安全复习 | njuyxw&#39;s homepage</title>
+    <title>Automata: The methods and the madness | njuyxw&#39;s homepage</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络安全复习</h1>
+                    <h1 class="description center-align post-title">Automata: The methods and the madness</h1>
                 </div>
             </div>
         </div>
@@ -462,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                计算机网络
+                            <a href="/categories/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/" class="post-category">
+                                形式语言与自动机
                             </a>
                         
                     </div>
@@ -475,14 +475,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-19
+                    2021-07-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-19
+                    2021-07-20
                 </div>
                 
 
@@ -501,44 +501,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网络安全概念问答"><a href="#网络安全概念问答" class="headerlink" title="网络安全概念问答"></a>网络安全概念问答</h1><p><strong>1.网络攻击有哪些类型？</strong></p>
-<p>打断；窃听；修改；伪装</p>
-<p>被动攻击：窃听流量或包，难以检测但是可以避免</p>
-<p>主动攻击：假装，拦截修改包，难以预防但是可以检测</p>
-<p>网络安全要求：可获得的；保密的；完整的；真实的</p>
-<p><strong>2.网络安全的措施。</strong></p>
-<p>加密；报文鉴别码（报文无法被更改）；标志（报文无法伪造）</p>
-<p><strong>3.对称加密技术。</strong></p>
-<p>共享同一个密钥$K_{A_B}$，是对称的。</p>
-<p>要求：强大的加密算法；发送方和接收方必须安全地获得密钥 - 密钥分配</p>
-<p>加密算法：</p>
-<p>经典算法：凯撒密码、Mono-alphabetic密码、维吉内·密码（Vigenere Cipher）、篱笆密码、Row-Column密码</p>
-<p>现代算法：块加密：DES（数据加密标准）、3DES、AES（高级加密标准）</p>
-<p><strong>4.破解办法有哪些？</strong></p>
+                <h1 id="Automata-The-methods-and-the-madness"><a href="#Automata-The-methods-and-the-madness" class="headerlink" title="Automata: The methods and the madness"></a>Automata: The methods and the madness</h1><p>序：本次形式语言与自动机的学习采用的是《Automata Theory,Languages, and Computation》第三版。下面给出了本书pdf的<a target="_blank" rel="noopener" href="http://ce.sharif.edu/courses/94-95/1/ce414-2/resources/root/Text%20Books/Automata/John%20E.%20Hopcroft,%20Rajeev%20Motwani,%20Jeffrey%20D.%20Ullman-Introduction%20to%20Automata%20Theory,%20Languages,%20and%20Computations-Prentice%20Hall%20%282006%29.pdf">链接</a>。</p>
+<p>第一章是对于自动机相关领域的绪论，包括自动机的简单介绍、数学证明方式以及核心概念</p>
+<h2 id="自动机的简单介绍"><a href="#自动机的简单介绍" class="headerlink" title="自动机的简单介绍"></a>自动机的简单介绍</h2><p>熟悉下面几个概念，详细的定义会在后面的章节中解释。</p>
 <ul>
-<li>唯密文攻击</li>
-<li>已知明文攻击（当入侵者知道（明文，密文）的一些匹配时）</li>
-<li>选择明文攻击（入侵者能够选择某一明文报文并得到该明文报文所对应的密文形式）</li>
+<li>有限自动机：状态+状态转移</li>
+<li>正则表达式：有限自动机的结构符号</li>
+<li>语法树：语法结构</li>
+<li>图灵机：一种自动机模型</li>
 </ul>
-<p><strong>5.RSA密钥生成的过程。</strong></p>
-<p>见课本</p>
-<p><strong>6.报文鉴别码。（MAC）</strong></p>
-<p>共享密钥s，报文m，生成（H(s,m)）与m一起发送。</p>
-<p>MD5—–SHA-1</p>
-<p><strong>7.数字签名。</strong></p>
-<p>见课本</p>
-<p><strong>8.Diffie-Hellman算法。</strong></p>
-<p>见课本</p>
-<p><strong>9.一次一密会话密钥</strong></p>
-<p>认证之后，一方提供会话密钥，用另一方的公钥加密。</p>
-<p><strong>10.安全电子邮箱。</strong></p>
-<p>利用会话密钥</p>
-<p>①A选择一个随机对称会话密钥 ②用这个对称密钥加密她的报文 ，③用B的公钥加密这个对称密钥</p>
-<p>④级联该加密的报文和加密的对称密钥形成一个包；⑤然后向B的电子邮件发送这个包；</p>
-<p>B收到后：①他使用其私钥得到对称密钥，这样就可以解读 了。</p>
-<p>报文机密性+身份鉴别</p>
-<img src="image-20210628150843514.png"  style="zoom:33%;" />
-
+<h2 id="证明方式"><a href="#证明方式" class="headerlink" title="证明方式"></a>证明方式</h2><p>涉及到的证明方式主要有下面几种，默认已经很熟悉了。</p>
+<ul>
+<li>直接证明：演绎</li>
+<li>反证</li>
+<li>数学归纳法和结构化的数学归纳法</li>
+</ul>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>以下几个概念是后续章节的核心</p>
+<h3 id="字母表Alphabets"><a href="#字母表Alphabets" class="headerlink" title="字母表Alphabets"></a>字母表Alphabets</h3><p><strong>定义：</strong>符号的<strong>有限</strong>集合，采用$\Sigma$表示。</p>
+<p><strong>例子</strong>：$\Sigma={0,1}$为二进制字母表</p>
+<h3 id="字符串Strings"><a href="#字符串Strings" class="headerlink" title="字符串Strings"></a>字符串Strings</h3><p><strong>定义</strong>：给定字母表，符号取自其的有序的符号序列</p>
+<p>特殊字符串：空串，用$\epsilon$表示</p>
+<p>字符串长度：字符串中字符占的位置的个数</p>
+<h3 id="字母表的幂"><a href="#字母表的幂" class="headerlink" title="字母表的幂"></a>字母表的幂</h3><p>定义$\Sigma^k$表示从字母表$\Sigma$中所有长度为k的字符串的集合。</p>
+<p>例如，二进制字母表$\Sigma$，有$\Sigma^2={00,01,10,11}$</p>
+<p>定义$\Sigma^*=\Sigma^0\cup\Sigma^1\cup\Sigma^2…=\bigcup_{i=1}^{\infty}\Sigma^k$；这里规定了$\Sigma^0={\epsilon}$。</p>
+<p>另有定义$\Sigma^+=\bigcup_{i=1}^{\infty}\Sigma^k$，也即$\Sigma^*=\Sigma^+\cup{\epsilon}$</p>
+<h3 id="字符串的连接运算"><a href="#字符串的连接运算" class="headerlink" title="字符串的连接运算"></a>字符串的连接运算</h3><p>定义$x,y$连接为$xy$。</p>
+<h3 id="语言Languages"><a href="#语言Languages" class="headerlink" title="语言Languages"></a>语言Languages</h3><p><strong>定义：</strong>给定字母表$\Sigma$，语言$L$满足$L\subseteq\Sigma^*$</p>
+<p><strong>易混淆例子：</strong></p>
+<ul>
+<li>空集为空语言</li>
+<li>${\epsilon}$，只包含空串的语言，与空集不同</li>
+</ul>
+<p>遇到的一个难题：判断给定字符串是否在给定语言中</p>
 
                 
             </div>
@@ -565,7 +560,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://njuyxw.github.io/2021/07/19/wang-luo-an-quan-fu-xi/">http://njuyxw.github.io/2021/07/19/wang-luo-an-quan-fu-xi/</a>
+                    <a href="http://njuyxw.github.io/2021/07/20/automata-the-methods-and-the-madness/">http://njuyxw.github.io/2021/07/20/automata-the-methods-and-the-madness/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,9 +765,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/07/20/automata-the-methods-and-the-madness/">
                     <div class="card-image">
@@ -790,9 +786,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -805,6 +801,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -815,13 +812,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/19/qos-yi-ji-xu-lun-fu-xi/">
+                <a href="/2021/07/19/wang-luo-an-quan-fu-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Qos以及绪论复习">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="网络安全复习">
                         
-                        <span class="card-title">Qos以及绪论复习</span>
+                        <span class="card-title">网络安全复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
