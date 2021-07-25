@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络安全复习, njuyxw&#39;s homepage">
+    <meta name="keywords" content="第二章：有穷自动机, njuyxw&#39;s homepage">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络安全复习 | njuyxw&#39;s homepage</title>
+    <title>第二章：有穷自动机 | njuyxw&#39;s homepage</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络安全复习</h1>
+                    <h1 class="description center-align post-title">第二章：有穷自动机</h1>
                 </div>
             </div>
         </div>
@@ -462,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                计算机网络
+                            <a href="/categories/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/" class="post-category">
+                                形式语言与自动机
                             </a>
                         
                     </div>
@@ -475,14 +475,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-19
+                    2021-07-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-19
+                    2021-07-25
                 </div>
                 
 
@@ -501,44 +501,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网络安全概念问答"><a href="#网络安全概念问答" class="headerlink" title="网络安全概念问答"></a>网络安全概念问答</h1><p><strong>1.网络攻击有哪些类型？</strong></p>
-<p>打断；窃听；修改；伪装</p>
-<p>被动攻击：窃听流量或包，难以检测但是可以避免</p>
-<p>主动攻击：假装，拦截修改包，难以预防但是可以检测</p>
-<p>网络安全要求：可获得的；保密的；完整的；真实的</p>
-<p><strong>2.网络安全的措施。</strong></p>
-<p>加密；报文鉴别码（报文无法被更改）；标志（报文无法伪造）</p>
-<p><strong>3.对称加密技术。</strong></p>
-<p>共享同一个密钥$K_{A_B}$，是对称的。</p>
-<p>要求：强大的加密算法；发送方和接收方必须安全地获得密钥 - 密钥分配</p>
-<p>加密算法：</p>
-<p>经典算法：凯撒密码、Mono-alphabetic密码、维吉内·密码（Vigenere Cipher）、篱笆密码、Row-Column密码</p>
-<p>现代算法：块加密：DES（数据加密标准）、3DES、AES（高级加密标准）</p>
-<p><strong>4.破解办法有哪些？</strong></p>
-<ul>
-<li>唯密文攻击</li>
-<li>已知明文攻击（当入侵者知道（明文，密文）的一些匹配时）</li>
-<li>选择明文攻击（入侵者能够选择某一明文报文并得到该明文报文所对应的密文形式）</li>
-</ul>
-<p><strong>5.RSA密钥生成的过程。</strong></p>
-<p>见课本</p>
-<p><strong>6.报文鉴别码。（MAC）</strong></p>
-<p>共享密钥s，报文m，生成（H(s,m)）与m一起发送。</p>
-<p>MD5—–SHA-1</p>
-<p><strong>7.数字签名。</strong></p>
-<p>见课本</p>
-<p><strong>8.Diffie-Hellman算法。</strong></p>
-<p>见课本</p>
-<p><strong>9.一次一密会话密钥</strong></p>
-<p>认证之后，一方提供会话密钥，用另一方的公钥加密。</p>
-<p><strong>10.安全电子邮箱。</strong></p>
-<p>利用会话密钥</p>
-<p>①A选择一个随机对称会话密钥 ②用这个对称密钥加密她的报文 ，③用B的公钥加密这个对称密钥</p>
-<p>④级联该加密的报文和加密的对称密钥形成一个包；⑤然后向B的电子邮件发送这个包；</p>
-<p>B收到后：①他使用其私钥得到对称密钥，这样就可以解读 了。</p>
-<p>报文机密性+身份鉴别</p>
-<img src="image-20210628150843514.png"  style="zoom:33%;" />
-
+                <h1 id="有穷自动机"><a href="#有穷自动机" class="headerlink" title="有穷自动机"></a>有穷自动机</h1><h2 id="确定型有穷自动机"><a href="#确定型有穷自动机" class="headerlink" title="确定型有穷自动机"></a>确定型有穷自动机</h2><h3 id="定义及表示"><a href="#定义及表示" class="headerlink" title="定义及表示"></a>定义及表示</h3><p><strong>定义（DFA）：</strong>一个五元组$A=(Q,\Sigma,\delta,q_0,F)$；分别含义</p>
+<ol>
+<li>有穷的状态集合$Q$</li>
+<li>符号集合（字母表）$\Sigma$</li>
+<li>初始状态$q_0\in Q$</li>
+<li>转移函数$\delta$，输入为一个状态加一个符号，返回一个状态$\delta(q,a)=p$其中 $q,p\in Q \quad a\in \Sigma$</li>
+<li>终结状态（接受状态）</li>
+</ol>
+<p><strong>表示：</strong>状态图和状态表</p>
+<p><strong>扩展转移函数$\hat\delta$</strong>:输入为一个状态加一个字符串，返回一个状态</p>
+<p>​        基础：$\hat\delta(q,a)=\delta(q,a)$，其中$a\in \Sigma$</p>
+<p>​        归纳：字符串$w=xa$，则$\hat\delta(q,w)=\delta(\hat\delta(q,x),a)$</p>
+<h3 id="DFA的语言"><a href="#DFA的语言" class="headerlink" title="DFA的语言"></a>DFA的语言</h3><p><strong>定义：</strong>已知DFA为$A=(Q,\Sigma,\delta,q_0,F)$，其语言$L(A)$定义如下：<br>$$<br>L(A)={w|\hat\delta(q_0,w)\in F}<br>$$<br>DFA的语言称为正则语言</p>
+<h3 id="阶段总结以及部分习题解析"><a href="#阶段总结以及部分习题解析" class="headerlink" title="阶段总结以及部分习题解析"></a>阶段总结以及部分习题解析</h3><p>确定性有穷自动机的定义是基础中的基础，一切理论的延伸都是基于它。扩展转移函数的递归定义充分体现了“递归”这一数学概念在计算机理论科学的重要意义。下面的习题可以让我们更加深入的体会自动机理论与递归的融合。</p>
+<h4 id="习题2-2-2"><a href="#习题2-2-2" class="headerlink" title="习题2.2.2"></a>习题2.2.2</h4><p>对于任意状态$q\in Q$，串$x$和$y$，证明$\hat\delta(q,xy)=\hat\delta(\hat\delta(q,x),y)$</p>
+<p><strong>证明：</strong>对$y$的长度作归纳。</p>
+<p>​        基础：$y=\epsilon$，$\hat\delta(q,x)=\hat\delta(\hat\delta(q,x),\epsilon)$显然成立</p>
+<p>​        归纳：假设$|y|=n$时成立，当$|y|=n+1$时，设$y=za$，且有$|z|=n$。此时有<br>$$<br>\hat\delta(q,xy)=\hat\delta(q,xza)=\hat\delta(\hat\delta(q,xz),a)<br>$$<br>​                    第二个等号由扩展转移函数的递归定义决定，由归纳假设知<br>$$<br>\hat\delta(q,xy)=\hat\delta(\hat\delta(q,xz),a)=\hat\delta(\hat\delta(\hat\delta(q,x),z),a)=\hat\delta(\hat\delta(q,x),za)=\hat\delta(q,xza)=\hat\delta(q,xy)<br>$$<br>​                    第三、四个等式同样由扩展转移函数的定义得到。证毕。</p>
+<h4 id="习题2-2-8"><a href="#习题2-2-8" class="headerlink" title="习题2.2.8"></a>习题2.2.8</h4><p>A是一个DFA，$a$是A的一个输入符号，且满足对任意$q\in Q$，都有$\delta(q,a)=q$</p>
+<p>​    (a)证明对所有非负整数$n$，都有$\hat\delta(q,a^n)=q$</p>
+<p>​    (b)证明要么${a}^<em>\subseteq L(A) $，要么${a}^</em>\cap L(A)=\emptyset $</p>
+<p><strong>证明：</strong></p>
+<p>​    (a)对$n$作归纳</p>
+<p>​            基础：$\delta(q,a)=q$成立</p>
+<p>​            归纳：假设$n=k$成立，当$n=k+1$时，由归纳假设得<br>$$<br>\hat\delta(q,a^{k+1})=\hat\delta(\hat\delta(q,a^k),a)=\hat\delta(q,a)=q<br>$$<br>​            因此结论成立，证毕。</p>
+<p>​    (b)由(a)得，显然若$q_0\in F$，则${a}^<em>\subseteq L(A) $，否则${a}^</em>\cap L(A)=\emptyset $</p>
+<h2 id="非确定型有穷自动机"><a href="#非确定型有穷自动机" class="headerlink" title="非确定型有穷自动机"></a>非确定型有穷自动机</h2><p>未完待续…</p>
 
                 
             </div>
@@ -565,7 +554,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://njuyxw.github.io/2021/07/19/wang-luo-an-quan-fu-xi/">http://njuyxw.github.io/2021/07/19/wang-luo-an-quan-fu-xi/</a>
+                    <a href="http://njuyxw.github.io/2021/07/25/di-er-zhang-you-qiong-zi-dong-ji/">http://njuyxw.github.io/2021/07/25/di-er-zhang-you-qiong-zi-dong-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,9 +759,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/07/25/di-er-zhang-you-qiong-zi-dong-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="第二章：有穷自动机">
+                        
+                        <span class="card-title">第二章：有穷自动机</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/" class="post-category">
+                                    形式语言与自动机
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/07/20/automata-the-methods-and-the-madness/">
                     <div class="card-image">
@@ -790,56 +822,15 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
                             <a href="/categories/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/" class="post-category">
                                     形式语言与自动机
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/19/qos-yi-ji-xu-lun-fu-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Qos以及绪论复习">
-                        
-                        <span class="card-title">Qos以及绪论复习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
                                 </a>
                             
                             
