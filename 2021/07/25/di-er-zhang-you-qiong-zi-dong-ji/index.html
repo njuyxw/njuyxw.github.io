@@ -521,12 +521,12 @@
 <p>​        归纳：假设$|y|=n$时成立，当$|y|=n+1$时，设$y=za$，且有$|z|=n$。此时有<br>$$<br>\hat\delta(q,xy)=\hat\delta(q,xza)=\hat\delta(\hat\delta(q,xz),a)<br>$$<br>​                    第二个等号由扩展转移函数的递归定义决定，由归纳假设知<br>$$<br>\hat\delta(q,xy)=\hat\delta(\hat\delta(q,xz),a)=\hat\delta(\hat\delta(\hat\delta(q,x),z),a)=\hat\delta(\hat\delta(q,x),za)=\hat\delta(q,xza)=\hat\delta(q,xy)<br>$$<br>​                    第三、四个等式同样由扩展转移函数的定义得到。证毕。</p>
 <h4 id="习题2-2-8"><a href="#习题2-2-8" class="headerlink" title="习题2.2.8"></a>习题2.2.8</h4><p>A是一个DFA，$a$是A的一个输入符号，且满足对任意$q\in Q$，都有$\delta(q,a)=q$</p>
 <p>​    (a)证明对所有非负整数$n$，都有$\hat\delta(q,a^n)=q$</p>
-<p>​    (b)证明要么${a}^<em>\subseteq L(A) $，要么${a}^</em>\cap L(A)=\emptyset $</p>
+<p>​    (b)证明要么${a}^*\subseteq L(A) $，要么${a}^*\cap L(A)=\emptyset $</p>
 <p><strong>证明：</strong></p>
 <p>​    (a)对$n$作归纳</p>
 <p>​            基础：$\delta(q,a)=q$成立</p>
 <p>​            归纳：假设$n=k$成立，当$n=k+1$时，由归纳假设得<br>$$<br>\hat\delta(q,a^{k+1})=\hat\delta(\hat\delta(q,a^k),a)=\hat\delta(q,a)=q<br>$$<br>​            因此结论成立，证毕。</p>
-<p>​    (b)由(a)得，显然若$q_0\in F$，则${a}^<em>\subseteq L(A) $，否则${a}^</em>\cap L(A)=\emptyset $</p>
+<p>​    (b)由(a)得，显然若$q_0\in F$，则${a}^*\subseteq L(A) $，否则${a}^*\cap L(A)=\emptyset $</p>
 <h2 id="非确定型有穷自动机"><a href="#非确定型有穷自动机" class="headerlink" title="非确定型有穷自动机"></a>非确定型有穷自动机</h2><p>未完待续…</p>
 
                 
