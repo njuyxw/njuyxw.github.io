@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第二章：有穷自动机, njuyxw&#39;s homepage">
+    <meta name="keywords" content="强化学习lab1:实现DAgger算法, njuyxw&#39;s homepage">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第二章：有穷自动机 | njuyxw&#39;s homepage</title>
+    <title>强化学习lab1:实现DAgger算法 | njuyxw&#39;s homepage</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第二章：有穷自动机</h1>
+                    <h1 class="description center-align post-title">强化学习lab1:实现DAgger算法</h1>
                 </div>
             </div>
         </div>
@@ -462,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%BD%A2%E5%BC%8F%E8%AF%AD%E8%A8%80%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%9C%BA/" class="post-category">
-                                形式语言与自动机
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                强化学习
                             </a>
                         
                     </div>
@@ -475,14 +475,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-25
+                    2021-09-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-25
+                    2021-09-01
                 </div>
                 
 
@@ -501,33 +501,32 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="有穷自动机"><a href="#有穷自动机" class="headerlink" title="有穷自动机"></a>有穷自动机</h1><h2 id="确定型有穷自动机"><a href="#确定型有穷自动机" class="headerlink" title="确定型有穷自动机"></a>确定型有穷自动机</h2><h3 id="定义及表示"><a href="#定义及表示" class="headerlink" title="定义及表示"></a>定义及表示</h3><p><strong>定义（DFA）：</strong>一个五元组$A=(Q,\Sigma,\delta,q_0,F)$；分别含义</p>
-<ol>
-<li>有穷的状态集合$Q$</li>
-<li>符号集合（字母表）$\Sigma$</li>
-<li>初始状态$q_0\in Q$</li>
-<li>转移函数$\delta$，输入为一个状态加一个符号，返回一个状态$\delta(q,a)=p$其中 $q,p\in Q \quad a\in \Sigma$</li>
-<li>终结状态（接受状态）</li>
-</ol>
-<p><strong>表示：</strong>状态图和状态表</p>
-<p><strong>扩展转移函数$\hat\delta$</strong>:输入为一个状态加一个字符串，返回一个状态</p>
-<p>​        基础：$\hat\delta(q,a)=\delta(q,a)$，其中$a\in \Sigma$</p>
-<p>​        归纳：字符串$w=xa$，则$\hat\delta(q,w)=\delta(\hat\delta(q,x),a)$</p>
-<h3 id="DFA的语言"><a href="#DFA的语言" class="headerlink" title="DFA的语言"></a>DFA的语言</h3><p><strong>定义：</strong>已知DFA为$A=(Q,\Sigma,\delta,q_0,F)$，其语言$L(A)$定义如下：<br>$$<br>L(A)={w|\hat\delta(q_0,w)\in F}<br>$$<br>DFA的语言称为正则语言</p>
-<h3 id="阶段总结以及部分习题解析"><a href="#阶段总结以及部分习题解析" class="headerlink" title="阶段总结以及部分习题解析"></a>阶段总结以及部分习题解析</h3><p>确定性有穷自动机的定义是基础中的基础，一切理论的延伸都是基于它。扩展转移函数的递归定义充分体现了“递归”这一数学概念在计算机理论科学的重要意义。下面的习题可以让我们更加深入的体会自动机理论与递归的融合。</p>
-<h4 id="习题2-2-2"><a href="#习题2-2-2" class="headerlink" title="习题2.2.2"></a>习题2.2.2</h4><p>对于任意状态$q\in Q$，串$x$和$y$，证明$\hat\delta(q,xy)=\hat\delta(\hat\delta(q,x),y)$</p>
-<p><strong>证明：</strong>对$y$的长度作归纳。</p>
-<p>​        基础：$y=\epsilon$，$\hat\delta(q,x)=\hat\delta(\hat\delta(q,x),\epsilon)$显然成立</p>
-<p>​        归纳：假设$|y|=n$时成立，当$|y|=n+1$时，设$y=za$，且有$|z|=n$。此时有<br>$$<br>\hat\delta(q,xy)=\hat\delta(q,xza)=\hat\delta(\hat\delta(q,xz),a)<br>$$<br>​                    第二个等号由扩展转移函数的递归定义决定，由归纳假设知<br>$$<br>\hat\delta(q,xy)=\hat\delta(\hat\delta(q,xz),a)=\hat\delta(\hat\delta(\hat\delta(q,x),z),a)=\hat\delta(\hat\delta(q,x),za)=\hat\delta(q,xza)=\hat\delta(q,xy)<br>$$<br>​                    第三、四个等式同样由扩展转移函数的定义得到。证毕。</p>
-<h4 id="习题2-2-8"><a href="#习题2-2-8" class="headerlink" title="习题2.2.8"></a>习题2.2.8</h4><p>A是一个DFA，$a$是A的一个输入符号，且满足对任意$q\in Q$，都有$\delta(q,a)=q$</p>
-<p>​    (a)证明对所有非负整数$n$，都有$\hat\delta(q,a^n)=q$</p>
-<p>​    (b)证明要么${a}^*\subseteq L(A) $，要么${a}^*\cap L(A)=\emptyset $</p>
-<p><strong>证明：</strong></p>
-<p>​    (a)对$n$作归纳</p>
-<p>​            基础：$\delta(q,a)=q$成立</p>
-<p>​            归纳：假设$n=k$成立，当$n=k+1$时，由归纳假设得<br>$$<br>\hat\delta(q,a^{k+1})=\hat\delta(\hat\delta(q,a^k),a)=\hat\delta(q,a)=q<br>$$<br>​            因此结论成立，证毕。</p>
-<p>​    (b)由(a)得，显然若$q_0\in F$，则${a}^*\subseteq L(A) $，否则${a}^*\cap L(A)=\emptyset $</p>
-<h2 id="非确定型有穷自动机"><a href="#非确定型有穷自动机" class="headerlink" title="非确定型有穷自动机"></a>非确定型有穷自动机</h2><p>未完待续…</p>
+                <h2 id="First-and-Foremost"><a href="#First-and-Foremost" class="headerlink" title="First and Foremost"></a>First and Foremost</h2><p>有幸选到俞扬老师的强化学习这门课，这门课本来研究生课程，今年修改为本研共修，主要教授一些强化学习的经典算法，也涉及一些前沿知识。</p>
+<p>这一系列文章将随着教学进度推进。</p>
+<h2 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h2><h3 id="序列决策问题"><a href="#序列决策问题" class="headerlink" title="序列决策问题"></a>序列决策问题</h3><p>传统的监督学习问题针对的均是对于单个问题作出决策，而现实生活中我们常常需要对一系列问题作出决策。强化学习进行了如下的抽象。</p>
+<img src="强化学习lab1-实现DAgger算法/image-20210901115144036-0468305.png" alt="image-20210901115144036" style="zoom: 25%;" />
+
+<p>感知器感知周围的环境，智能体接受到环境的数据并作出相应的动作，同时这种动作也改变了外界的环境。举个例子，智能汽车采集周边环境的雷达、图像等信息，当气发现前方有一位行人时，他会刹车，而这个行为同时也诱发了环境的变化，比如行人会躲闪。</p>
+<p>每时每刻环境的状态都会发生变化，$t$时刻的环境用$s_t$表示，感知器观测的环境状态记作$o_t$，有时候这两者相同，有时候这两者又有区别，需要具体问题具体分析。t时刻智能体作出的动作表示为$a_t$。</p>
+<p>根据上述的符号定义，序列决策问题可以表示成一系列环境状态和动作的序列，如下：</p>
+<img src="强化学习lab1-实现DAgger算法/image-20210901120107648.png" alt="image-20210901120107648" style="zoom:33%;" />
+
+<h3 id="模仿学习"><a href="#模仿学习" class="headerlink" title="模仿学习"></a>模仿学习</h3><p>模仿学习时强化学习的一种方法，顾名思义，示例者提供示例，而学习器会进行模仿。一个非常朴素的想法是，可以直接利用监督学习的方法来解决具有序列决策背景的问题。我们可以将示例者提供的序列抽取出来形成样本+标记的形式：<br>$$<br>D={(s_0,a_1),(s_1,a_2)…}<br>$$<br>相应的优化问题也随之变化。</p>
+<img src="强化学习lab1-实现DAgger算法/image-20210901120917279.png" alt="image-20210901120917279" style="zoom:33%;" />
+
+<p>从理论上分析，这种朴素的方法并不好，随着序列长度的增加，误差会越来越大。类似下面这个例子：</p>
+<img src="强化学习lab1-实现DAgger算法/image-20210901121145247.png" alt="image-20210901121145247" style="zoom:50%;" />
+
+<p>当车头拐弯有偏差后，随着时间的推进，这种偏差会越来越大。因此我们就要思考如何解决这样的问题？DAgger算法给出了一种方案。</p>
+<h3 id="DAgger算法"><a href="#DAgger算法" class="headerlink" title="DAgger算法"></a>DAgger算法</h3><p>DAgger算法的朴素想法是既然你学习偏了，那我就纠正你，你再重新进行模仿，一步步的带着你回到正轨。算法的具体描述如下：</p>
+<img src="强化学习lab1-实现DAgger算法/image-20210901121526631.png" alt="image-20210901121526631" style="zoom:50%;" />
+
+<p>我们首先初始化个分类器，这个分类器决定了当前环境该做出什么行为，我们需要迭代的对分类器进行教导。每次循环分类器会得到一个环境决策序列，然而由于分类器做的不好，我们需要手动的纠正他的错误，将环境打上正确的标记，这是一次对训练数据的充实，分类器对于新增的数据重新进行训练，反复的迭代进行下去。这个分类器是监督分类器，可以选用KNN，SVM，CNN等。</p>
+<h2 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h2><p>实验采用的环境是gym库，要求是利用DAgger算法训练一个可以玩蒙特祖马的复仇的小ai。实验要求不高，但是人工标准的时间很长。</p>
+<p>带更新</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="http://ciml.info/dl/v0_99/ciml-v0_99-ch18.pdf">A Tutorial about Imitation Learning</a></p>
+<p>[A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning](A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning)</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25688750">模仿学习（Imitation Learning）介绍</a></p>
 
                 
             </div>
@@ -554,7 +553,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://njuyxw.github.io/2021/07/25/di-er-zhang-you-qiong-zi-dong-ji/">http://njuyxw.github.io/2021/07/25/di-er-zhang-you-qiong-zi-dong-ji/</a>
+                    <a href="http://njuyxw.github.io/2021/09/01/qiang-hua-xue-xi-lab1-shi-xian-dagger-suan-fa/">http://njuyxw.github.io/2021/09/01/qiang-hua-xue-xi-lab1-shi-xian-dagger-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -759,9 +758,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/01/qiang-hua-xue-xi-lab1-shi-xian-dagger-suan-fa/">
                     <div class="card-image">
@@ -779,9 +779,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -794,6 +794,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -804,13 +805,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/20/automata-the-methods-and-the-madness/">
+                <a href="/2021/07/25/di-er-zhang-you-qiong-zi-dong-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="第一章：绪论">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="第二章：有穷自动机">
                         
-                        <span class="card-title">第一章：绪论</span>
+                        <span class="card-title">第二章：有穷自动机</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -821,7 +822,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
                             </span>
                         <span class="publish-author">
                             
