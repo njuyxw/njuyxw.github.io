@@ -5,6 +5,8 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+head: |
+  <meta name="google-site-verification" content="I4ww2hXsLGF6xIMCPkS8szu3apDZVlDgaSESpdNRwps" />
 ---
 
 Currently, I am a second-year graduate student of [School of Artificial Intelligence](https://ai.nju.edu.cn/) in [Nanjing University](https://www.nju.edu.cn/) advised by Professor [Yu-Feng Li](http://www.lamda.nju.edu.cn/liyf/) and a member of [LAMDA](http://www.lamda.nju.edu.cn/) Group, led by professor [Zhi-Hua Zhou](http://www.lamda.nju.edu.cn/zhouzh/).
