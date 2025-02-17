@@ -5,8 +5,6 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
-head: |
-  <meta name="google-site-verification" content="I4ww2hXsLGF6xIMCPkS8szu3apDZVlDgaSESpdNRwps" />
 ---
 
 Currently, I am a second-year graduate student of [School of Artificial Intelligence](https://ai.nju.edu.cn/) in [Nanjing University](https://www.nju.edu.cn/) advised by Professor [Yu-Feng Li](http://www.lamda.nju.edu.cn/liyf/) and a member of [LAMDA](http://www.lamda.nju.edu.cn/) Group, led by professor [Zhi-Hua Zhou](http://www.lamda.nju.edu.cn/zhouzh/).
@@ -63,7 +61,7 @@ My research interests include Machine Learning and Artificial General Intelligen
 ### Other Papers
 
 - **Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models.** [[PDF]](https://arxiv.org/pdf/2502.06389.pdf) [[Webpage]](assets/self-backtracking/index.html)  
-**Xiao-Wen Yang**, Xuan-Yi Zhu, Wen-Da Wei, Ding-Chu Zhang, Jie-Jing Shao, Zhi-Hua Zhou, Lan-Zhe Guo, Yu-Feng Li.  
+**Xiao-Wen Yang**, Xuan-Yi Zhu, Wen-Da Wei, Ding-Chu Zhang, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
 *Preprint, 2025.*
 
 - **LawGPT: Knowledge-Guided Data Generation and Its Application to Legal LLM.** [[PDF]](https://arxiv.org/pdf/2502.06572)   
