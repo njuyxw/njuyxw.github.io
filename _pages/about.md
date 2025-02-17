@@ -38,7 +38,7 @@ My research interests include Machine Learning and Artificial General Intelligen
   *The 13th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2025</span>).*
 
 - **Abductive Learning for Neuro-Symbolic Grounded Imitation.** [[PDF]](https://arxiv.org/abs/2411.18201) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/index.html)  
-  Jie-Jing Shao\*, Hao-Ran Hao\*, **Xiao-Wen Yang**, De-Chuan Zhan.  
+  Jie-Jing Shao\*, Hao-Ran Hao\*, **Xiao-Wen Yang**, Yu-Feng Li.  
   *The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<span style="color: #0366d6">KDD'25</span>).*
 
 - **Analysis for Abductive Learning and Neural-Symbolic Reasoning Shortcuts.** [[PDF]](https://openreview.net/pdf?id=AQYabSOfci) [[Webpage]](/shortcuttheory/)  
