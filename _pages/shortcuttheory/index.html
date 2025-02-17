@@ -1,0 +1,164 @@
+---
+layout: single
+title: "Analysis for Abductive Learning and Neural-Symbolic Reasoning Shortcuts"
+permalink: /shortcuttheory/
+author_profile: true
+---
+
+<style>
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+    .bibtex {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-family: monospace;
+    }
+    .abstract {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-left: 5px solid #007BFF;
+        margin-bottom: 20px;
+    }
+    .content {
+        text-align: justify;
+    }
+    .figure {
+        text-align: center;
+    }
+    .centered-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 40%;
+    }
+    .centered-caption {
+        text-align: center;
+    }
+</style>
+
+<header style="text-align: center; margin-bottom: 40px;">
+    <p>
+        <a href="https://www.lamda.nju.edu.cn/yangxw/">Xiao-Wen Yang</a>, 
+        <a href="https://www.lamda.nju.edu.cn/weiwd/">Wen-Da Wei</a>, 
+        <a href="https://www.lamda.nju.edu.cn/shaojj/">Jie-Jing Shao</a>, 
+        <a href="https://cs.nju.edu.cn/liyf/index.htm">Yu-Feng Li</a>, 
+        <a href="https://cs.nju.edu.cn/zhouzh/index.htm">Zhi-Hua Zhou</a>
+        <br><br>
+        <a href="https://openreview.net/pdf?id=AQYabSOfci"> 
+            <img src="{{ site.baseurl }}/assets/images/shortcuttheory/pdf.png" alt="PDF icon" style="width:30px;height:30px;">
+        </a>
+    </p>
+</header>
+
+<div class="container">
+    <section class="abstract">
+        <p>Neural-symbolic learning (NeSy) and abductive learning (ABL) have been demonstrated to be effective by enabling us to infer labels that are consistent with prior knowledge. However, their generalization ability is influenced by <b>reasoning shortcuts</b>, where high accuracy is attained by exploiting unintended semantics. This paper conducts a theoretical analysis to quantify and alleviate the harm caused by reasoning shortcuts.</p>
+    </section>
+    <section>
+        <h2>Reasoning Shortcuts in Neural-Symbolic Systems</h2>
+        <div class="figure">
+            <img src="{{ site.baseurl }}/assets/images/shortcuttheory/intro_new.png" alt="Reasoning Shortcuts Example" class="centered-image">
+        </div>
+        <p>Reasoning shortcuts occur when neural networks acquire inaccurate semantics due to the absence of grounding labels for intermediate concepts. This leads to high performance on training tasks but poor generalization to new tasks. For example, in the figure above, an autonomous vehicle needs to decide whether to move forward or stop based on the given rule in Task 1: Red ∨ Car → Stop, which means it should stop whether there is a red light or a vehicle ahead. The model trained on this task could correctly classify the target, but it acquires a reasoning shortcut by confusing the presence of a vehicle and the red light. When the perception model learned in Task 1 is applied to Task 2, which involves determining whether turning right is permissible, the autonomous vehicle mistakenly decides it should stop when the perception model incorrectly predicts a vehicle ahead, possibly resulting in a dangerous situation.
+        </p>
+    </section>
+    <section>
+        <h2>Quantify Harm of Reasoning Shortcuts</h2>
+        <h3>Shortcut Risk</h3>
+            <p>Many researchers pointed out that the optimization of representative neural-symbolic algorithms such as DeepProblog, LTN, and Semantic Loss can have a general form, that is given a training dataset <em>S</em>, find <em>f</em> ∈ 𝓕 that minimizes:</p>
+            <p style="text-align: center;">
+                <img src="https://latex.codecogs.com/svg.latex?\mathcal{\hat{L}}_{nesy}=-\frac{1}{N}\sum_{\mathbf{x}_i,\mathbf{y}_i}\ln\left(\sum_{\mathbf{z}\in\mathcal{Z}}\mathbb{I}(\mathbf{z},\text{KB}\vDash\mathbf{y}_i)\cdot f(\mathbf{z}|\mathbf{x}_i)\right)" alt="Neural-Symbolic Loss Function">
+            </p>
+            <p>In light of the fact that the incorrect intermediate concept satisfying the symbolic knowledge may also occupy a term within the loss function, this objective does not sufficiently guarantee the correct prediction of intermediate symbolic concepts, thereby giving rise to the issue of reasoning shortcuts.</p>
+        <p>Considering a supervised learning task whose target is to directly learn <em>f</em> given grounding labels of intermediate concepts. The objective of this task is to minimize the cross-entropy loss <em>𝓛</em> under the joint distribution of <img src="https://latex.codecogs.com/svg.latex?(\mathbf{x}, \mathbf{z}, \mathbf{y})">, i.e.,</p>
+<p style="text-align: center;">
+    <img src="https://latex.codecogs.com/svg.latex?\mathcal{L}=-\mathbb{E}_{(\mathbf{x},\mathbf{z},\mathbf{y})\sim\mathcal{P}}\ln(f(\mathbf{z}|\mathbf{x}))" alt="Cross-Entropy Loss">
+</p>
+<p>We believe that if <em>f</em> can minimize <em>𝓛</em>, then there would be no occurrence of shortcut problems. However, in real neural-symbolic tasks, we do not optimize along the same objective but optimize <img src="https://latex.codecogs.com/svg.latex?\hat{\mathcal{L}}_{nesy}"> using a training dataset of limited size. This leads to the emergence of the reasoning shortcut problem. Hence, we define the severity of reasoning shortcuts as the disparity between our desired objectives and the attainable objectives within a finite dataset. Formally, the shortcut risk <img src="https://latex.codecogs.com/svg.latex?R_s"> is defined as:</p>
+<p style="text-align: center;">
+    <img src="https://latex.codecogs.com/svg.latex?R_s\triangleq\mathcal{L}-\hat{\mathcal{L}}_{nesy}" alt="Shortcut Risk">
+</p>
+<p>The shortcut risk represents the severity of the reasoning shortcuts. The larger <img src="https://latex.codecogs.com/svg.latex?R_s">, the more severe the issue of reasoning shortcuts.</p>
+        
+        <h3>Knowledge Base Complexity</h3> <p>The complexity of the symbolic knowledge base (KB) is a key factor influencing the severity of reasoning shortcuts. It depends on data dependence and rule dependence, which affect how the knowledge base contributes to the neural-symbolic system. High complexity reduces the likelihood of reasoning shortcuts.
+            The complexity of KB, denoted as <img src="https://latex.codecogs.com/svg.latex?D_{KB}">, is defined as:</p>
+<p style="text-align: center;">
+    <img src="https://latex.codecogs.com/svg.latex?D_{KB}\triangleq\mathbb{E}_{(\mathbf{x},\mathbf{y})\sim\mathcal{S}}\left[\sum_{\mathbf{z}\in\mathcal{Z}}\mathbb{I}(\mathbf{z},\mbox{KB} \nvDash \mathbf{y})\right]" alt="Definition of KB Complexity">
+</p>
+<p><img src="https://latex.codecogs.com/svg.latex?D_{KB}"> is defined as the expected count of instances <img src="https://latex.codecogs.com/svg.latex?\mathbf{z}"> that conflict with the knowledge base. Intuitively, if the complexity of KB is sufficiently high, it is more likely to encounter contradictions with <img src="https://latex.codecogs.com/svg.latex?\mathbf{z}">, thus resulting in a large <img src="https://latex.codecogs.com/svg.latex?D_{KB}">.</p>
+    </section>
+    
+    <section>
+        <h2>Main Results</h2>
+        <h3>About NeSy</h3>
+    <div class="figure">
+        <img src="{{ site.baseurl }}/assets/images/shortcuttheory/th1.png" alt="th4.1" class="centered-image">
+    </div>
+    <p>Theorem 4.1 showcases the unbounded nature of 
+        <img src="https://latex.codecogs.com/svg.latex?R_s" alt="R_s" /> 
+        when the hypothesis space 
+        <img src="https://latex.codecogs.com/svg.latex?\mathcal{F}" alt="\mathcal{F}" /> 
+        exhibits sufficient complexity but the complexity of the knowledge base is insufficient. 
+        In such cases, the learned function 
+        <img src="https://latex.codecogs.com/svg.latex?f" alt="f" /> 
+        satisfies the knowledge base for all training samples, thus 
+        <img src="https://latex.codecogs.com/svg.latex?\mathcal{\hat{L}}_{nesy}=0" alt="\mathcal{\hat{L}}_{nesy}=0" />. 
+        Simultaneously, it produces erroneous predictions for the intermediate concept 
+        <img src="https://latex.codecogs.com/svg.latex?\mathbf{z}" alt="\mathbf{z}" /> 
+        across all samples, leading to the desired objective loss 
+        <img src="https://latex.codecogs.com/svg.latex?\mathcal{L}" alt="\mathcal{L}" /> 
+        towards infinity. Consequently, the absence of constraints on the hypothesis space 
+        <img src="https://latex.codecogs.com/svg.latex?\mathcal{F}" alt="\mathcal{F}" /> 
+        greatly increases the risk of reasoning shortcuts.
+    </p>
+    <div class="figure">
+        <img src="{{ site.baseurl }}/assets/images/shortcuttheory/th2.png" alt="th4.2" class="centered-image">
+    </div>
+    <p>Then in Theroem 4.5, we show that the shortcut risk has an upper bound when we restrict the hypothesis space. 
+        <img src="https://latex.codecogs.com/svg.latex?R_s" alt="R_s" />  can be bounded by three terms. The first term relates to the complexity of the knowledge base, where a more complex 
+        <img src="https://latex.codecogs.com/svg.latex?\mbox{KB}" alt="\mbox{KB}" /> 
+        leads to a tighter upper bound for <img src="https://latex.codecogs.com/svg.latex?R_s" alt="R_s" /> . The second term corresponds to the convergence of the number of training samples, following a rate of 
+        <img src="https://latex.codecogs.com/svg.latex?\mathcal{O}(1/\sqrt{N})" alt="\mathcal{O}(1/\sqrt{N})" />. 
+        The third term comprises the empirical Rademacher complexity of the hypothesis space and a constant factor, which characterizes the properties inherent to the hypothesis space itself.
+    </p>
+    <h3>About ABL</h3>
+    <p>We analyze the reasoning shortcut problem of the ABL framework. We prove that the shortcut risk of the ABL algorithm, denoted as <img src="https://latex.codecogs.com/svg.latex?R_s^{ABL}" alt="R_s^{ABL}"/>, is consistently smaller than that of the NeSy algorithm, and if we can construct a reasonable distance function, <img src="https://latex.codecogs.com/svg.latex?R_s^{ABL}" alt="R_s^{ABL}"/> will have an upper bound of asymptotic rate <img src="https://latex.codecogs.com/svg.latex?\mathcal{O}(\kappa)" alt="\mathcal{O}(\kappa)"/> where <img src="https://latex.codecogs.com/svg.latex?\kappa" alt="\kappa"/> represents the error rate of the distance function. This means that the reasoning shortcuts may be greatly alleviated, showcasing its potential to address the shortcut problem. More details can be seen in the paper.</p>
+</section>
+    <section>
+        <h2>Experiments</h2>
+        We empirically corroborate two principal
+        findings that have previously been supported by theoretical
+        evidence: (1). As the complexity of the knowledge base
+        increases, both the neural-symbolic approaches and the ABL
+        algorithms exhibit lower shortcut risk. (2). The selection of
+        the distance function Dis influences the performance of the
+        ABL algorithm significantly, where a good choice of Dis
+        can assist in alleviating the reasoning shortcuts.
+        <div class="figure">
+            <img src="{{ site.baseurl }}/assets/images/shortcuttheory/exp.png" alt="exp" class="centered-image">
+        </div>
+        </p>
+    </section>
+
+<section>
+    <h2>BibTeX</h2>
+    <div class="bibtex">
+        @inproceedings{yangshortcut,<br>
+        &nbsp;&nbsp;title={Analysis for Abductive Learning and Neural-symbolic Reasoning Shortcuts},<br>
+        &nbsp;&nbsp;author={Xiao-Wen Yang and Wen-Da Wei and Jie-Jing Shao and Yu-Feng Li and Zhi-Hua Zhou},<br>
+        &nbsp;&nbsp;booktitle={Proceedings of the International Conference on Machine Learning},<br>
+        &nbsp;&nbsp;year={2024},<br>
+        }
+    </div>
+    <div class="figure">
+        <a href="https://www.lamda.nju.edu.cn/"> 
+            <img src="{{ site.baseurl }}/assets/images/shortcuttheory/lamda.png" alt="lamda icon" style="width:210px;height:100px;">
+        </a>
+        <a href="https://www.nju.edu.cn/"> 
+            <img src="{{ site.baseurl }}/assets/images/shortcuttheory/nju.png" alt="nju icon" style="width:250px;height:100px;">
+        </a>
+    </div>
+</section>
+</div>
