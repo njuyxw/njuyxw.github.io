@@ -60,7 +60,7 @@ My research interests include Machine Learning and Artificial General Intelligen
 
 ### Other Papers
 
-- **Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models.** [[PDF]](https://arxiv.org/pdf/2502.06389.pdf) [[Webpage]](assets/self-backtracking/index.html)  
+- **Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models.** [[PDF]](https://www.arxiv.org/pdf/2502.04404) [[Webpage]](assets/self-backtracking/index.html)  
 **Xiao-Wen Yang**, Xuan-Yi Zhu, Wen-Da Wei, Ding-Chu Zhang, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
 *Preprint, 2025.*
 
