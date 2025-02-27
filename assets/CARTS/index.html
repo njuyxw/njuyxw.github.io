@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Add MathJax script -->
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <title>CARTS</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script> -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+<body>
+
+  <!-- Title -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="static/images/favicon.ico" alt="CARTS Logo" style="max-width:45px;"> CARTS: Advancing Neural <br>Theorem Proving with Diversified <br> Tactic Calibration and Bias-Resistant Tree Search</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/yangxw/">Xiao-Wen Yang<sup>1 2</sup></a>,</span>
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/zhouz/">Zhi Zhou<sup>1</sup></a>,</span>
+              <span class="author-block"><a href="#">Haiming Wang<sup>3 5</sup></a>,</span>
+              <span class="author-block"><a href="#">Aoxue Li<sup>4</sup></a>,</span><br>
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/weiwd/">Wen-Da Wei<sup>1 2</sup></a>,</span>
+              <span class="author-block"><a href="#">Hui Jin<sup>4</sup></a>,</span>
+              <span class="author-block"><a href="#">Zhenguo Li<sup>4</sup></a>,</span>
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/liyf/">Yu-Feng Li<sup>1 2</sup></a></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>National Key Laboratory for Novel Software Technology, Nanjing University<br></span>
+              <span class="author-block"><sup>2</sup>School of Artificial Intelligence, Nanjing University<br></span><br>
+              <span class="author-block"><sup>3</sup>Sun Yat-sen University<br></span>
+              <span class="author-block"><sup>4</sup>Noah's Ark Lab, Huawei<br></span>
+              <span class="author-block"><sup>5</sup>Moonshot AI<br></span>
+            </div>
+            
+            <span class="author-block"><a href="mailto:yangxw@lamda.nju.edu.cn">yangxw@lamda.nju.edu.cn</a></span><br>
+            <span class="author-block">Published on ICLR 2025</span>
+            <!-- Links -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://openreview.net/pdf?id=VQwI055flA" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Openreview</span>
+                </a>
+              </span>
+                <span class="link-block">
+                  <a href="https://github.com/njuyxw/CARTS" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">🤗</span>
+                    <span>Data</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">🤗</span>
+                    <span>Model</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent advancements in neural theorem proving integrate large language models with tree search algorithms like Monte Carlo Tree Search (MCTS), where the language model suggests tactics and the tree search finds the complete proof path.
+    However, many tactics proposed by the language model converge to semantically or strategically similar, reducing diversity and increasing search costs by expanding redundant proof paths. This issue exacerbates as computation scales and more tactics are explored per state. Furthermore, the trained value function suffers from false negatives, label imbalance, and domain gaps due to biased data construction. 
+    To address these challenges, we propose CARTS (diversified tactic CAlibration and bias-Resistant Tree Search), which balances tactic diversity and importance while calibrating model confidence. 
+    CARTS also introduce preference modeling and an adjustment term related to the ratio of valid tactics to improve the bias-resistance of the value function. Experimental results demonstrate that CARTS consistently outperforms previous methods achieving a pass@l rate of 49.6\% on the miniF2F-test benchmark. Further analysis confirms that CARTS improves tactic diversity and leads to a more balanced tree search.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <figure class="image">
+          <img src="static/images/main_fig.png" alt="Overview of CARTS Method">
+          <figcaption class="has-text-centered">
+          Figure 1: The overall framework of CARTS. 
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Method</h2>
+      
+
+      <!-- Diversified Tactic Calibration -->
+      <div class="content has-text-justified">
+        <h3 class="title is-4">Diversified Tactic Calibration</h3>
+        <p>
+          In theorem proving, language models often generate multiple candidate tactics that exhibit redundancy, which can hinder exploration. To address this, we introduce <strong>Diversified Tactic Calibration</strong>, which reorders tactics based on their importance (model confidence) and diversity. This is achieved using the <strong>Maximal Marginal Relevance (MMR)</strong> algorithm, integrated into a modified MCTS framework. The MCTS process in CARTS consists of three key steps:
+        </p>
+      
+        <h4 class="title is-5">1 Selection</h4>
+        <p>
+          The algorithm starts at the root node and traverses the tree to a leaf node, selecting actions that balance exploration and exploitation. The selection is guided by a <strong>Weighted Upper Confidence Bound (WUCB)</strong> score, which incorporates both the accumulated value of actions and a weight representing their importance and diversity. The WUCB score is calculated as:
+        </p>
+        <p>
+          \[
+          \text{WUCB}(s,a) = \frac{W(s,a)}{N(s,a)} + w(s,a) \cdot \frac{\sqrt{N(s,\cdot)}}{N(s,a)}
+          \]
+        </p>
+        <p>
+          Here:
+          <ul>
+            <li>\(N(s,a)\): Number of times action \(a\) has been taken in state \(s\).</li>
+            <li>\(W(s,a)\): Total value accumulated from action \(a\) in state \(s\).</li>
+            <li>\(w(s,a)\): Weight representing the importance and diversity of the tactic.</li>
+          </ul>
+        </p>
+      
+        <h4 class="title is-5">2 Calibration & Expansion</h4>
+        <p>
+          During this phase, the language model generates multiple candidate tactics, which are verified using the Lean 4. Verified tactics are then reordered using the <strong>MMR algorithm</strong> to ensure diversity and importance. The MMR score for each tactic \(a_i\) is calculated as:
+        </p>
+        <p>
+          \[
+          \text{MMR}(s,a_i) = \lambda \cdot v_{policy}(s,a_i) - (1 - \lambda) \cdot \max_{s_j' \in S} f_{enc}(s_i')^\top f_{enc}(s_j')
+          \]
+        </p>
+        <p>
+          Where:
+          <ul>
+            <li>\(v_{policy}(s,a_i)\): Model confidence for tactic \(a_i\), adjusted by a length penalty.</li>
+            <li>\(f_{enc}(\cdot)\): A pre-trained sentence encoder used to compute state similarities.</li>
+            <li>\(\lambda\): A parameter controlling the trade-off between importance and diversity.</li>
+          </ul>
+        </p>
+        <p>
+          The MMR algorithm iteratively selects tactics that maximize this score, ensuring a diverse and high-quality set of tactics. These tactics are then expanded into the search tree, with their weights \(w(s,a_i)\) set to their MMR scores to encourage exploration of diverse tactics.
+        </p>
+      
+        <h4 class="title is-5">3 Backpropagation</h4>
+        <p>
+          After expanding the tree, the algorithm updates the statistics of nodes and edges along the search trajectory. A <strong>bias-resistant value function</strong> \(V(s,a)\) is used to evaluate the value of actions, and this value is propagated back through the tree. Specifically:
+          <ul>
+            <li>The weight \(W(s_t, a_t)\) of each edge is updated recursively: \(W(s_t, a_t) \mathrel{+}= V(s, a)\).</li>
+            <li>The visit count \(N(s_t, a_t)\) is incremented: \(N(s_t, a_t) \mathrel{+}= 1\).</li>
+          </ul>
+        </p>
+        <p>
+          This ensures that the search tree reflects the outcomes of simulations, improving future selections.
+        </p>
+      </div>
+
+      <!-- Bias-Resistant Value Function -->
+<div class="content has-text-justified">
+    <h3 class="title is-4">Bias-Resistant Value Function</h3>
+    <p>
+        In MCTS-based methods, training a value function is crucial, typically involving the creation of positive and negative samples using the policy network on training data. Positive samples consist of correct actions (or trajectories) from the dataset, while negative samples are those generated by the policy network that lead to undesirable states. Binary cross-entropy loss is then used to train the value network.
+    </p>
+    <p>
+        Due to the hardness of verifying the correctness of actions not on the proof path, previous work often treats these actions as negative samples, resulting in an excessive number of negative samples, some of which are even inaccurate. This makes binary loss unsuitable and biases the value function. Furthermore, the domain gap between the training and test datasets also contributes to biases. In this paper, we conduct debiasing during both training and inference stages, as detailed below.
+    </p>
+    <h4 class="title is-5">Training</h4>
+    <p>
+        To mitigate bias introduced by data collection, we first structure the dataset into preference pairs of positive and negative samples. We utilize an embedding model \( f_{enc} \) to effectively filter out noisy samples. Specifically, if \( f_{enc}(s')^\top f_{enc}(s_{pos}') > \tau \), we discard the action \( a \). Here, \( s' \) is the next state from a sampled negative action \( a \) at the current state \( s \), \( s_{pos}' \) is the correct next state, and \( \tau \) is a threshold. This filtering ensures that the selected negative actions are more likely to be undesirable, thus reducing data noise.
+    </p>
+    <p>
+        Moreover, we adopt the preference modeling framework to train our bias-resistant value function. We employ the Bradley-Terry (BT) model, a widely used technique for preference modeling. The BT model posits that the probability of action \(a_{pos}\) being preferred over action \(a_{neg}\) given state \(s\) is expressed as:
+        \[
+        \mathbb{P}(a_{pos} \succ a_{neg} \mid s) = \frac{\exp(V_\theta(s,a_{pos}))}{\exp(V_\theta(s,a_{pos})) + \exp(V_\theta(s,a_{neg}))}
+        \]
+        Assuming access to the filtered dataset \(D=\{(s^{(i)},a_{pos}^{(i)},a_{neg}^{(i)})\}_{i=1}^{N}\), we can parametrize the value function \(V_{\theta}(s, a)\) and estimate the parameters \(\theta\) by minimizing the negative log-likelihood.
+    </p>
+    <p>
+        Preference modeling offers several advantages. Firstly, by only providing the relative superiority among samples, false negative samples do not require further processing. This is because we can reasonably assume that the correct proof steps provided in the dataset are always optimal and align with human theorem proving's preferences. Additionally, since the dataset is presented in the form of preference pairs, this effectively oversamples the positive pairs, alleviating the issue of class imbalance between positive and negative samples, as demonstrated in some studies.
+    </p>
+    <h4 class="title is-5">Inference</h4>
+    <p>
+        To mitigate the domain gap between the training and test datasets, we introduce an adjustment term into the value function during the inference stage. As previously mentioned, before calibration in CARTS, all \(E\) tactics should be processed through the Lean system to filter out \(e\) valid tactics. Intuitively, if the number of valid tactics is small, people will raise concerns about the capability of the current policy model, needing for a reduced reward for the current action. We define this reward adjustment as: \( \alpha = e/E \), representing the ratio between the number of valid tactics and the total number of tactics generated by the language model at the current state. This adjustment term serves as a test-time adaptation to the test dataset. The final bias-resistant value function integrates both the trained value network and this adjustment term as:
+        \[
+        V(s, a) = 
+        \begin{cases}
+        0, & \text{if } s' \text{ has no child nodes,} \\
+        1, & \text{else if } s' \text{ is the proved state,}\\
+        \frac{1}{2}(\alpha + V_\theta(s, a)), &\text{otherwise.}
+        \end{cases}
+        \]
+        Where \(s'\) is the next state.
+    </p>
+    <p>
+        Unlike the intrinsic reward introduced by DeepSeek-Prover-V1.5, which only considers whether the search expands nodes, we consider both the expansion capability of the policy network and the generalizability of the value network, forming our final bias-resistant value function. The adjustment term can be interpreted as a form of test-time adaptation to the distribution of test data, thus can mitigate the domain gap.
+    </p>
+</div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Experiments</h2>
+      <!-- Add your results content here -->
+      <div class="content">
+      <p>We conduct experiments on MiniF2F and ProofNet.</p>
+      </div>
+      <figure class="image">
+        <img src="static/images/minif2f.png" alt="minif2f" style="max-width: 80%; margin: 0 auto; display: block;">
+        <figcaption class="has-text-centered">
+        Figure 2: The results on MiniF2F-test.
+        </figcaption>
+      </figure>
+
+      <figure class="image">
+        <img src="static/images/proofnet.png" alt="proofnet" style="max-width: 75%; margin: 0 auto; display: block;">
+        <figcaption class="has-text-centered">
+        Figure 3: The results on ProofNet.
+        </figcaption>
+      </figure>
+
+      <div class="content">
+          <br>
+        <p>We also do some analysis. More results can been found in the paper.</p>
+        </div>
+        <figure class="image">
+          <img src="static/images/ablation.png" alt="ablation" style="max-width: 75%; margin: 0 auto; display: block;">
+          <figcaption class="has-text-centered">
+          Figure 4: The ablation study.
+          </figcaption>
+        </figure>
+        <figure class="image">
+          <img src="static/images/improve.png" alt="improvement" style="max-width: 75%; margin: 0 auto; display: block;">
+          <figcaption class="has-text-centered">
+          Figure 5: The improvement curve of CARTS.
+          </figcaption>
+        </figure>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>@article{carts2025,
+  title={CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search},
+  author={Yang, Xiao-Wen and Zhou, Zhi and Wang, Haiming and Li, Aoxue and Wei, Wen-Da and Jin, Hui and Li, Zhenguo and Li, Yu-Feng},
+  journal={ICLR},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

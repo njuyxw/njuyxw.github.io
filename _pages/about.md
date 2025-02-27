@@ -33,9 +33,9 @@ My research interests include Machine Learning and Artificial General Intelligen
 
 ### Conference Papers
 
-- **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.**  
-  **Xiao-Wen Yang**, Zhi Zhou, Haiming Wang, Aoxue Li, Wen-Da Wei, Hui Jin, Zhenguo Li, Yu-Feng Li.  
-  *The 13th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2025</span>).*
+- **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.**  [[PDF]](https://openreview.net/pdf?id=VQwI055flA) [[Webpage]](assets/CARTS/index.html)  
+**Xiao-Wen Yang**, Zhi Zhou, Haiming Wang, Aoxue Li, Wen-Da Wei, Hui Jin, Zhenguo Li, Yu-Feng Li.  
+*The 13th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2025</span>).*
 
 - **Abductive Learning for Neuro-Symbolic Grounded Imitation.** [[PDF]](https://arxiv.org/abs/2411.18201) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/index.html)  
   Jie-Jing Shao\*, Hao-Ran Hao\*, **Xiao-Wen Yang**, Yu-Feng Li.  
