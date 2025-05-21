@@ -20,11 +20,9 @@ My research interests include Machine Learning and Artificial General Intelligen
 - **Neural Symbolic Integration**: integrating the power of machine learning and logical reasoning to boost the reasoning and planning capabilities of the AI system
 
 ## News
-
-- 🤖 [Feb 2025] Our paper "Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models" is available on [arXiv](https://arxiv.org/abs/2502.04404)!  We have released our [code](https://github.com/LAMDASZ-ML/Self-Backtracking) and [dataset](https://huggingface.co/datasets/yangxw/countdown-backtracking)!
-
-
 - 🎉 [Jan 2025] CARTS is accepted by ICLR2025.
+- 🤖 [Feb 2025] Our paper "Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models" is available on [arXiv](https://arxiv.org/abs/2502.04404)!  We have released our [code](https://github.com/LAMDASZ-ML/Self-Backtracking) and [dataset](https://huggingface.co/datasets/yangxw/countdown-backtracking)!
+- 🎉 [May 2025] A survey about **Neuro-Symbolic Reasoning of LLMs** is accepted by IJCAI 2025 Survey Track.
 
 <a name="publications"></a>
 
@@ -32,6 +30,13 @@ My research interests include Machine Learning and Artificial General Intelligen
 (* denotes the co-first authors)
 
 ### Conference Papers
+- **Neuro-Symbolic Artificial Intelligence: Towards Improving the Reasoning Abilities of Large Language Models.**  
+**Xiao-Wen Yang\***, Jie-Jing Shao\*, Lan-Zhe Guo\*, Bo-Wen Zhang, Zhi Zhou, Lin-Han Jia, Wang-Zhou Dai, Yu-Feng Li.  
+*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025 Survey Track</span>).*
+
+- **Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.**  
+Wen-Da Wei\*, **Xiao-Wen Yang\***, Jie-Jing Shao and Lan-Zhe Guo.
+*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
 
 - **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.**  [[PDF]](https://openreview.net/pdf?id=VQwI055flA) [[Webpage]](assets/CARTS/index.html)  
 **Xiao-Wen Yang**, Zhi Zhou, Haiming Wang, Aoxue Li, Wen-Da Wei, Hui Jin, Zhenguo Li, Yu-Feng Li.  
