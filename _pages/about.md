@@ -35,7 +35,11 @@ My research interests include Machine Learning and Artificial General Intelligen
 *The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025 Survey Track</span>).*
 
 - **Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.**  
-Wen-Da Wei\*, **Xiao-Wen Yang\***, Jie-Jing Shao and Lan-Zhe Guo.
+Wen-Da Wei\*, **Xiao-Wen Yang\***, Jie-Jing Shao and Lan-Zhe Guo.  
+*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
+
+- **D3: Diversity, Difficulty, and Dependability-Aware Data Selection for Sample-Efficient LLM Instruction Tuning**  
+Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi Liu and Lan-Zhe Guo.  
 *The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
 
 - **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.**  [[PDF]](https://openreview.net/pdf?id=VQwI055flA) [[Webpage]](assets/CARTS/index.html)  
