@@ -42,7 +42,7 @@ My research interests include Machine Learning and Artificial General Intelligen
 **Xiao-Wen Yang**, Xuan-Yi Zhu, Ding-Chu Zhang, Wen-Da Wei, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
 *The 40th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2026</span>).*
 
-- **Neuro-Symbolic Artificial Intelligence: Towards Improving the Reasoning Abilities of Large Language Models.**  
+- **Neuro-Symbolic Artificial Intelligence: Towards Improving the Reasoning Abilities of Large Language Models.**  [[PDF]](https://arxiv.org/abs/2508.13678)  
 **Xiao-Wen Yang\***, Jie-Jing Shao\*, Lan-Zhe Guo\*, Bo-Wen Zhang, Zhi Zhou, Lin-Han Jia, Wang-Zhou Dai, Yu-Feng Li.  
 *The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025 Survey Track</span>).*
 
@@ -57,6 +57,10 @@ My research interests include Machine Learning and Artificial General Intelligen
 - **Safe Abductive Learning in the Presence of Inaccurate Rules.** [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/29572)  
   **Xiao-Wen Yang**, Jie-Jing Shao, Wei-Wei Tu, Yu-Feng Li, Wang-Zhou Dai, Zhi-Hua Zhou.  
   *The 38th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2024</span>).*
+
+- **AutoEvolve: Automatically Evolving Queries for Applicable and Scalable Retrieval-Augmented Generation Benchmarking**
+Dingchu Zhang, Xiaowen Zhang, Yue Fei, Renjun Hu, **Xiaowen Yang**, Zhi Zhou, Baixuan Li, Yufeng Li, Xing Shi, Wei Lin.  
+*The 2025 Conference on Empirical Methods in Natural Language Processing (<span style="color: #0366d6">EMNLP 2025</span>).*
 
 - **Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.**  
 Wen-Da Wei, **Xiao-Wen Yang**, Jie-Jing Shao and Lan-Zhe Guo.  
