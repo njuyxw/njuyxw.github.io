@@ -32,9 +32,7 @@ My research interests include Machine Learning and Artificial General Intelligen
 (* denotes the co-first authors)
 
 ### Conference Papers
-
-
-- **FormalML: A Benchmark for Evaluating Formal Subgoal Completion in Machine Learning Theory.** [[PDF]](https://arxiv.org/abs/2510.02335)        
+- **FormalML: A Benchmark for Evaluating Formal Subgoal Completion in Machine Learning Theory.** [[PDF]](https://arxiv.org/abs/2510.02335)          
 **Xiao-Wen Yang**\*, Zihao Zhang\*, Jianuo Cao, Zhi Zhou, Zenan Li, Lan-Zhe Guo, Yuan Yao, Taolue Chen, Yu-Feng Li†, Xiaoxing Ma†.  
 *The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
 
