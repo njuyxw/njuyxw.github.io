@@ -58,7 +58,7 @@ My research interests include Machine Learning and Artificial General Intelligen
   **Xiao-Wen Yang**, Jie-Jing Shao, Wei-Wei Tu, Yu-Feng Li, Wang-Zhou Dai, Zhi-Hua Zhou.  
   *The 38th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2024</span>).*
 
-- **AutoEvolve: Automatically Evolving Queries for Applicable and Scalable Retrieval-Augmented Generation Benchmarking**
+- **AutoEvolve: Automatically Evolving Queries for Applicable and Scalable Retrieval-Augmented Generation Benchmarking.**  
 Dingchu Zhang, Xiaowen Zhang, Yue Fei, Renjun Hu, **Xiaowen Yang**, Zhi Zhou, Baixuan Li, Yufeng Li, Xing Shi, Wei Lin.  
 *The 2025 Conference on Empirical Methods in Natural Language Processing (<span style="color: #0366d6">EMNLP 2025</span>).*
 
