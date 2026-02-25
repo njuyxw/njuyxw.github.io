@@ -15,14 +15,16 @@ I got my B.Sc. degree in [Department of Computer Science and Technology](https:/
 
 My research interests include Machine Learning and Artificial General Intelligence (AGI). Currently, I am focusing on the subfields:
 
-- **AI4Math**: applying AI techniques to mathematical problem solving and research
-- **Reasoning in LLMs**: improving the reasoning capability of large language models
-- **Neural Symbolic Integration**: integrating the power of machine learning and logical reasoning to boost the reasoning and planning capabilities of the AI system
+- **AI4Math**: applying AI techniques to mathematical problem solving and research.
+- **Reasoning in LLMs**: improving the reasoning capability of large language models.
+- **Neural Symbolic Learning**: integrating the power of machine learning and logical reasoning to boost the reasoning and planning capabilities of the AI system.
 
 ## News
 - 🎉 [Jan 2025] CARTS is accepted by ICLR2025.
-- 🤖 [Feb 2025] Our paper "Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models" is available on [arXiv](https://arxiv.org/abs/2502.04404)!  We have released our [code](https://github.com/LAMDASZ-ML/Self-Backtracking) and [dataset](https://huggingface.co/datasets/yangxw/countdown-backtracking)!
 - 🎉 [May 2025] A survey about **Neuro-Symbolic Reasoning of LLMs** is accepted by IJCAI 2025 Survey Track.
+- 🎉 [Nov 2025] Self-Backtracking is accepted by AAAI2026.
+- 🎉 [Jan 2026] FormalML and ChinaTravel benchmark is accepted by ICLR2026.
+
 
 <a name="publications"></a>
 
@@ -30,25 +32,24 @@ My research interests include Machine Learning and Artificial General Intelligen
 (* denotes the co-first authors)
 
 ### Conference Papers
+
+
+- **FormalML: A Benchmark for Evaluating Formal Subgoal Completion in Machine Learning Theory.** [[PDF]](https://arxiv.org/abs/2510.02335) 
+**Xiao-Wen Yang**\*, Zihao Zhang\*, Jianuo Cao, Zhi Zhou, Zenan Li, Lan-Zhe Guo, Yuan Yao, Taolue Chen, Yu-Feng Li†, Xiaoxing Ma†.  
+*The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
+
+
+- **Step Back to Leap Forward: Self-Backtracking for Symbolic Reasoning and Planning in Language Models.** [[PDF]](https://www.arxiv.org/pdf/2502.04404) [[Webpage]](assets/self-backtracking/index.html)  
+**Xiao-Wen Yang**, Xuan-Yi Zhu, Ding-Chu Zhang, Wen-Da Wei, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
+*The 40th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2026</span>).*
+
 - **Neuro-Symbolic Artificial Intelligence: Towards Improving the Reasoning Abilities of Large Language Models.**  
 **Xiao-Wen Yang\***, Jie-Jing Shao\*, Lan-Zhe Guo\*, Bo-Wen Zhang, Zhi Zhou, Lin-Han Jia, Wang-Zhou Dai, Yu-Feng Li.  
 *The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025 Survey Track</span>).*
 
-- **Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.**  
-Wen-Da Wei\*, **Xiao-Wen Yang\***, Jie-Jing Shao and Lan-Zhe Guo.  
-*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
-
-- **D3: Diversity, Difficulty, and Dependability-Aware Data Selection for Sample-Efficient LLM Instruction Tuning**  
-Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi Liu and Lan-Zhe Guo.  
-*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
-
 - **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.**  [[PDF]](https://openreview.net/pdf?id=VQwI055flA) [[Webpage]](assets/CARTS/index.html)  
 **Xiao-Wen Yang**, Zhi Zhou, Haiming Wang, Aoxue Li, Wen-Da Wei, Hui Jin, Zhenguo Li, Yu-Feng Li.  
 *The 13th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2025</span>).*
-
-- **Abductive Learning for Neuro-Symbolic Grounded Imitation.** [[PDF]](https://arxiv.org/abs/2411.18201) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/index.html)  
-  Jie-Jing Shao\*, Hao-Ran Hao\*, **Xiao-Wen Yang**, Yu-Feng Li.  
-  *The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<span style="color: #0366d6">KDD'25</span>).*
 
 - **Analysis for Abductive Learning and Neural-Symbolic Reasoning Shortcuts.** [[PDF]](https://openreview.net/pdf?id=AQYabSOfci) [[Webpage]](/shortcuttheory/)  
   **Xiao-Wen Yang**, Wen-Da Wei, Jie-Jing Shao, Yu-Feng Li, Zhi-Hua Zhou.  
@@ -57,6 +58,19 @@ Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi 
 - **Safe Abductive Learning in the Presence of Inaccurate Rules.** [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/29572)  
   **Xiao-Wen Yang**, Jie-Jing Shao, Wei-Wei Tu, Yu-Feng Li, Wang-Zhou Dai, Zhi-Hua Zhou.  
   *The 38th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2024</span>).*
+
+- **Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.**  
+Wen-Da Wei, **Xiao-Wen Yang**, Jie-Jing Shao and Lan-Zhe Guo.  
+*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
+
+- **D3: Diversity, Difficulty, and Dependability-Aware Data Selection for Sample-Efficient LLM Instruction Tuning**  
+Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi Liu and Lan-Zhe Guo.  
+*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
+
+- **Abductive Learning for Neuro-Symbolic Grounded Imitation.** [[PDF]](https://arxiv.org/abs/2411.18201) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/index.html)  
+  Jie-Jing Shao\*, Hao-Ran Hao\*, **Xiao-Wen Yang**, Yu-Feng Li.  
+  *The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<span style="color: #0366d6">KDD'25</span>).*
+
 
 - **LOG: Active Model Adaptation for Label-Efficient OOD Generalization.** [[PDF]](https://openreview.net/pdf?id=VdQWVdT_8v)  
   Jie-Jing Shao, Lan-Zhe Guo, **Xiao-Wen Yang**, Yu-Feng Li.  
@@ -69,8 +83,8 @@ Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi 
 
 ### Other Papers
 
-- **Step Back to Leap Forward: Self-Backtracking for Boosting Reasoning of Language Models.** [[PDF]](https://www.arxiv.org/pdf/2502.04404) [[Webpage]](assets/self-backtracking/index.html)  
-**Xiao-Wen Yang**, Xuan-Yi Zhu, Wen-Da Wei, Ding-Chu Zhang, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
+- **Pianist Transformer: Towards Expressive Piano Performance Rendering via Scalable Self-Supervised Pre-Training.** [[PDF]](https://arxiv.org/pdf/2512.02652)  
+Hong-Jie You, Jie-Jing Shao, **Xiao-Wen Yang**, Lin-Han Jia, Lan-Zhe Guo, Yu-Feng Li.  
 *Preprint, 2025.*
 
 - **LawGPT: Knowledge-Guided Data Generation and Its Application to Legal LLM.** [[PDF]](https://arxiv.org/pdf/2502.06572)   
@@ -78,7 +92,7 @@ Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi 
   *Preprint, 2025.*
 
 - **ChinaTravel: A Real-World Benchmark for Language Agent in Chinese Travel Planning.** [[PDF]](https://arxiv.org/pdf/2412.13682.pdf) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html)  
-  Jie-Jing Shao\*, Xiao-Wen Yang\*, Bo-Wen Zhang\*, Bai-Zhi Chen,  
+  Jie-Jing Shao\*, Bo-Wen Zhang\*, **Xiao-Wen Yang**\*, Bai-Zhi Chen,  
   Wen-Da Wei, Guohao Cai, Zhenhua Dong, Lan-Zhe Guo, Yu-Feng Li.  
   *Preprint, 2024.*
 
@@ -101,11 +115,10 @@ Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **Xiao-Wen Yang**, Bo Zheng, Yi 
 
 ## Academic Service
 Reviewer for:
-- AAAI 2024, 2025
-- ICLR 2024, 2025
-- ICML 2024, 2025
-- NeurIPS 2023, 2024
-- ACL Rolling Review 2024
+- AAAI 2024, 2025, 2026
+- ICLR 2024, 2025, 2026
+- ICML 2024, 2025, 2026
+- NeurIPS 2023, 2024, 2025
 
 Meta Reviewer for IJCAI 2025
 
