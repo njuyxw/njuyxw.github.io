@@ -36,7 +36,9 @@ My research interests include Machine Learning and Artificial General Intelligen
 **<u>Xiao-Wen Yang</u>**\*, Zihao Zhang\*, Jianuo Cao, Zhi Zhou, Zenan Li, Lan-Zhe Guo, Yuan Yao, Taolue Chen, Yu-Feng Li†, Xiaoxing Ma†.  
 *The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
 
-
+- **ChinaTravel: A Real-World Benchmark for Language Agent in Chinese Travel Planning.** [[PDF]](https://arxiv.org/pdf/2412.13682.pdf) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html)  
+  Jie-Jing Shao\*, Bo-Wen Zhang\*, **<u>Xiao-Wen Yang</u>**\*, Bai-Zhi Chen, Si-Yu Han, Jing-Hao Pang, Wen-Da Wei, Guohao Cai, Zhenhua Dong, Lan-Zhe Guo†, Yu-Feng Li†.  
+  *The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
 
 - **Step Back to Leap Forward: Self-Backtracking for Symbolic Reasoning and Planning in Language Models.** [[PDF]](https://www.arxiv.org/pdf/2502.04404) [[Webpage]](assets/self-backtracking/index.html)  
 **<u>Xiao-Wen Yang</u>**, Xuan-Yi Zhu, Ding-Chu Zhang, Wen-Da Wei, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
@@ -94,10 +96,6 @@ Hong-Jie You, Jie-Jing Shao, **<u>Xiao-Wen Yang</u>**, Lin-Han Jia, Lan-Zhe Guo,
   Zhi Zhou, Kun-Yang Yu, Shi-Yu Tian, **<u>Xiao-Wen Yang</u>**, Jiang-Xin Shi, Peng-Xiao Song, Yi-Xuan Jin, Lan-Zhe Guo, Yu-Feng Li.  
   *Preprint, 2025.*
 
-- **ChinaTravel: A Real-World Benchmark for Language Agent in Chinese Travel Planning.** [[PDF]](https://arxiv.org/pdf/2412.13682.pdf) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html)  
-  Jie-Jing Shao\*, Bo-Wen Zhang\*, **<u>Xiao-Wen Yang</u>**\*, Bai-Zhi Chen,  
-  Wen-Da Wei, Guohao Cai, Zhenhua Dong, Lan-Zhe Guo, Yu-Feng Li.  
-  *Preprint, 2024.*
 
 - **Investigating the Limitation of CLIP Models: The Worst-Performing Categories.** [[PDF]](https://arxiv.org/pdf/2310.03324.pdf)  
   Jie-Jing Shao\*, Jiang-Xin Shi\*, **<u>Xiao-Wen Yang</u>**\*, Lan-Zhe Guo, Yu-Feng Li.  
