@@ -36,7 +36,7 @@ My research interests include Machine Learning and Artificial General Intelligen
 **<u>Xiao-Wen Yang</u>**\*, Zihao Zhang\*, Jianuo Cao, Zhi Zhou, Zenan Li, Lan-Zhe Guo, Yuan Yao, Taolue Chen, Yu-Feng Li†, Xiaoxing Ma†.  
 *The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
 
-- **ChinaTravel: A Real-World Benchmark for Language Agent in Chinese Travel Planning.** [[PDF]](https://arxiv.org/pdf/2412.13682.pdf) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html)  
+- **ChinaTravel: An Open-Ended Benchmark for Language Agents in Chinese Travel Planning.** [[PDF]](https://arxiv.org/pdf/2412.13682.pdf) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html)  
   Jie-Jing Shao\*, Bo-Wen Zhang\*, **<u>Xiao-Wen Yang</u>**\*, Bai-Zhi Chen, Si-Yu Han, Jing-Hao Pang, Wen-Da Wei, Guohao Cai, Zhenhua Dong, Lan-Zhe Guo†, Yu-Feng Li†.  
   *The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
 
