@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }} · Research in the cosmos</title>
+  <meta name="description" content="Xiao-Wen Yang — Ph.D. student at Nanjing University. Exploring machine learning, mathematical reasoning, and neuro-symbolic intelligence.">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/cosmic.css' | relative_url }}">
+  <script src="{{ '/assets/js/cosmic.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a href="{{ '/' | relative_url }}" class="wordmark" aria-label="Xiao-Wen Yang home"><span class="pixel-mark" aria-hidden="true">✦</span> XIAO-WEN YANG<span class="wordmark-cn"> / 杨骁文</span></a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#publications">Publications</a><a href="#service">More</a></nav>
+    <span class="header-status"><i></i> EARTH · NANJING</span>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="site-footer"><span>© {{ site.time | date: "%Y" }} Xiao-Wen Yang</span><a href="#main" aria-label="Back to top">↑</a></footer>
+</body>
+</html>

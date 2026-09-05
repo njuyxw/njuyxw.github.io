@@ -1,132 +1,77 @@
 ---
+layout: cosmic
 permalink: /
-title: "About Me"
-author_profile: true
-redirect_from: 
+title: "Xiao-Wen Yang"
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-Currently, I am a second-year graduate student of [School of Artificial Intelligence](https://ai.nju.edu.cn/) in [Nanjing University](https://www.nju.edu.cn/) advised by Professor [Yu-Feng Li](http://www.lamda.nju.edu.cn/liyf/) and a member of [LAMDA](http://www.lamda.nju.edu.cn/) Group, led by professor [Zhi-Hua Zhou](http://www.lamda.nju.edu.cn/zhouzh/).
+<section id="about" class="hero" aria-labelledby="hero-title">
+  <canvas id="universe" aria-hidden="true"></canvas>
+  <div class="hero-copy">
+    <div class="hero-identity">
+      <div class="avatar-frame"><img class="pixel-avatar" src="{{ '/images/xiaowen-pixel-avatar.png' | relative_url }}" width="176" height="176" alt="Pixel portrait of Xiao-Wen Yang, with short black hair and glasses" fetchpriority="high"></div>
+      <div><h1 id="hero-title">Xiao-Wen Yang<span lang="zh-CN">杨骁文</span></h1><p class="hero-affiliation"><strong>Xiaohongshu · AllSpark</strong><br>Research Intern · Agent post-training · Jun 2026–present<br>Ph.D. Student · Nanjing University<br><a href="http://www.lamda.nju.edu.cn/">LAMDA</a> · Advisor: <a href="http://www.lamda.nju.edu.cn/liyf/">Yu-Feng Li</a></p></div>
+    </div>
+    <ul class="research-tags" aria-label="Research interests"><li>AI for Math</li><li>LLM Reasoning</li><li>Neuro-Symbolic Learning</li></ul>
+    <div class="hero-actions"><a class="button primary" href="#publications">Publications <span>↗</span></a><a class="text-link" href="https://scholar.google.com/citations?user=QLnf8eQAAAAJ">Scholar ↗</a><a class="text-link" href="https://github.com/njuyxw">GitHub ↗</a><a class="text-link" href="mailto:yangxw@lamda.nju.edu.cn">Email ↗</a></div>
+  </div>
+  <div class="scene-caption"><span class="tiny-cross" aria-hidden="true">+</span><small id="hero-era-caption" lang="zh-CN">纪元总览</small></div>
+  <div class="hero-bottom"><span>NANJING, CHINA</span><a href="#publications" aria-label="Scroll to publications">↓ PUBLICATIONS</a></div>
+  <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause cosmos Ⅱ</button>
+</section>
 
-I got my B.Sc. degree in [Department of Computer Science and Technology](https://cs.nju.edu.cn/) in June 2023 from [Nanjing University](https://www.nju.edu.cn). In the same year, I was admitted to pursue a Ph.D. degree in [Nanjing University](https://www.nju.edu.cn/) without entrance examination.
+<div class="page-shell">
+  <section class="transmissions" aria-labelledby="news-title">
+    <h2 id="news-title">News</h2>
+    <div class="news-list">
+      {% for news in site.data.cosmic_news limit: 2 %}
+      <p><time datetime="{{ news.date }}">{{ news.date | replace: '-', '.' }}</time><span>{% if news.url %}<a href="{{ news.url }}">{{ news.text }}</a>{% else %}{{ news.text }}{% endif %}</span></p>
+      {% endfor %}
+      <details><summary>Earlier news <span>+</span></summary>
+        {% for news in site.data.cosmic_news offset: 2 %}
+        <p><time datetime="{{ news.date }}">{{ news.date | replace: '-', '.' }}</time><span>{% if news.url %}<a href="{{ news.url }}">{{ news.text }}</a>{% else %}{{ news.text }}{% endif %}</span></p>
+        {% endfor %}
+      </details>
+    </div>
+  </section>
 
-## Research Interests
+  <section id="publications" class="section-block publications" aria-labelledby="publications-title">
+    <div class="section-heading"><h2 id="publications-title">Publications<span class="accent">.</span></h2></div>
+    <div class="archive-controls" hidden>
+      <div class="filters" role="group" aria-label="Choose an era and filter publications by year">
+        <button class="active" type="button" data-year="all" aria-pressed="true"><span class="era-node" aria-hidden="true"></span><strong>All years</strong><small>总览</small></button>
+        <button type="button" data-year="earlier" aria-pressed="false"><span class="era-node" aria-hidden="true"></span><strong>≤ 2023</strong><small>长夜</small></button>
+        <button type="button" data-year="2024" aria-pressed="false"><span class="era-node" aria-hidden="true"></span><strong>2024</strong><small>乱纪元</small></button>
+        <button type="button" data-year="2025" aria-pressed="false"><span class="era-node" aria-hidden="true"></span><strong>2025</strong><small>恒纪元</small></button>
+        <button type="button" data-year="2026" aria-pressed="false"><span class="era-node" aria-hidden="true"></span><strong>2026</strong><small>远航</small></button>
+      </div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="paper-search" placeholder="Search papers" aria-label="Search publications"></label>
+    </div>
+    <div class="era-observatory" aria-labelledby="era-title">
+      <canvas id="era-universe" aria-hidden="true"></canvas>
+      <div class="era-narrative"><h3 id="era-title" lang="zh-CN">纪元总览</h3><span id="era-civilization" lang="zh-CN">文明档案</span></div>
+      <button class="motion-toggle era-motion" type="button" aria-pressed="false" hidden>Pause cosmos Ⅱ</button>
+    </div>
+    <span lang="zh-CN" id="era-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+    <div class="archive-meta"><span id="paper-count" role="status" aria-live="polite">{{ site.data.cosmic_publications.size }} PUBLICATIONS</span></div>
+    <div class="paper-grid">
+    {% for paper in site.data.cosmic_publications %}
+      <article class="paper-card{% if paper.art_scene %} featured{% endif %}" data-year="{{ paper.year }}">
+        {% if paper.art_scene %}<div class="paper-art"><canvas class="archive-art" data-scene="{{ paper.art_scene }}" aria-hidden="true"></canvas></div>{% endif %}
+        <div class="paper-body">
+          <div class="paper-meta"><span class="venue">{{ paper.label }}</span></div>
+          <h3>{{ paper.title }}</h3>
+          <details class="paper-details"><summary>Authors &amp; venue</summary><div class="paper-authors">{{ paper.authors | markdownify }}</div><div class="paper-venue">{{ paper.venue | markdownify }}</div>{% if paper.authors contains '\*' %}<small>* Equal contribution</small>{% endif %}{% if paper.authors contains '†' %}<small>† Corresponding author</small>{% endif %}</details>
+          {% if paper.links.size > 0 %}<div class="paper-footer"><div class="paper-links">{% for link in paper.links %}<a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.label }} <span aria-hidden="true">↗</span><span class="sr-only">: {{ paper.title }}</span></a>{% endfor %}</div></div>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+    </div>
+    <p id="no-results" class="no-results" hidden>No papers found.</p>
+  </section>
 
-My research interests include Machine Learning and Artificial General Intelligence (AGI). Currently, I am focusing on the subfields:
-
-- **AI4Math**: applying AI techniques to mathematical problem solving and research.
-- **Reasoning in LLMs**: improving the reasoning capability of large language models.
-- **Neural Symbolic Learning**: integrating the power of machine learning and logical reasoning to boost the reasoning and planning capabilities of the AI system.
-
-## News
-- 🎉 [Jan 2025] CARTS is accepted by ICLR2025.
-- 🎉 [May 2025] A survey about **Neuro-Symbolic Reasoning of LLMs** is accepted by IJCAI 2025 Survey Track.
-- 🎉 [Nov 2025] Self-Backtracking is accepted by AAAI2026.
-- 🎉 [Jan 2026] FormalML and ChinaTravel benchmark is accepted by ICLR2026.
-
-
-<a name="publications"></a>
-
-## Publication
-(* denotes the co-first authors)
-
-### Conference Papers
-- **FormalML: A Benchmark for Evaluating Formal Subgoal Completion in Machine Learning Theory.** [[PDF]](https://arxiv.org/abs/2510.02335)  
-**<u>Xiao-Wen Yang</u>**\*, Zihao Zhang\*, Jianuo Cao, Zhi Zhou, Zenan Li, Lan-Zhe Guo, Yuan Yao, Taolue Chen, Yu-Feng Li†, Xiaoxing Ma†.  
-*The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
-
-- **ChinaTravel: An Open-Ended Benchmark for Language Agents in Chinese Travel Planning.** [[PDF]](https://arxiv.org/pdf/2412.13682.pdf) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html)  
-  Jie-Jing Shao\*, Bo-Wen Zhang\*, **<u>Xiao-Wen Yang</u>**\*, Bai-Zhi Chen, Si-Yu Han, Jing-Hao Pang, Wen-Da Wei, Guohao Cai, Zhenhua Dong, Lan-Zhe Guo†, Yu-Feng Li†.  
-  *The 14th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2026</span>).*
-
-- **Step Back to Leap Forward: Self-Backtracking for Symbolic Reasoning and Planning in Language Models.** [[PDF]](https://www.arxiv.org/pdf/2502.04404) [[Webpage]](assets/self-backtracking/index.html)  
-**<u>Xiao-Wen Yang</u>**, Xuan-Yi Zhu, Ding-Chu Zhang, Wen-Da Wei, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.  
-*The 40th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2026</span>).*
-
-- **Neuro-Symbolic Artificial Intelligence: Towards Improving the Reasoning Abilities of Large Language Models.**  [[PDF]](https://arxiv.org/abs/2508.13678)  
-**<u>Xiao-Wen Yang</u>**\*, Jie-Jing Shao\*, Lan-Zhe Guo\*, Bo-Wen Zhang, Zhi Zhou, Lin-Han Jia, Wang-Zhou Dai, Yu-Feng Li.  
-*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025 Survey Track</span>).*
-
-- **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.**  [[PDF]](https://openreview.net/pdf?id=VQwI055flA) [[Webpage]](assets/CARTS/index.html)  
-**<u>Xiao-Wen Yang</u>**, Zhi Zhou, Haiming Wang, Aoxue Li, Wen-Da Wei, Hui Jin, Zhenguo Li, Yu-Feng Li.  
-*The 13th International Conference on Learning Representations (<span style="color: #0366d6">ICLR 2025</span>).*
-
-- **Analysis for Abductive Learning and Neural-Symbolic Reasoning Shortcuts.** [[PDF]](https://openreview.net/pdf?id=AQYabSOfci) [[Webpage]](/shortcuttheory/)  
-  **<u>Xiao-Wen Yang</u>**, Wen-Da Wei, Jie-Jing Shao, Yu-Feng Li, Zhi-Hua Zhou.  
-  *The 41st International Conference on Machine Learning (<span style="color: #0366d6">ICML 2024</span>).*
-
-- **Safe Abductive Learning in the Presence of Inaccurate Rules.** [[PDF]](https://ojs.aaai.org/index.php/AAAI/article/view/29572)  
-  **<u>Xiao-Wen Yang</u>**, Jie-Jing Shao, Wei-Wei Tu, Yu-Feng Li, Wang-Zhou Dai, Zhi-Hua Zhou.  
-  *The 38th AAAI Conference on Artificial Intelligence (<span style="color: #0366d6">AAAI 2024</span>).*
-
-- **AutoEvolve: Automatically Evolving Queries for Applicable and Scalable Retrieval-Augmented Generation Benchmarking.**  
-Dingchu Zhang, Xiaowen Zhang, Yue Fei, Renjun Hu, **<u>Xiaowen Yang</u>**, Zhi Zhou, Baixuan Li, Yufeng Li, Xing Shi, Wei Lin.  
-*The 2025 Conference on Empirical Methods in Natural Language Processing (<span style="color: #0366d6">EMNLP 2025</span>).*
-
-- **Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.**  
-Wen-Da Wei, **<u>Xiao-Wen Yang</u>**, Jie-Jing Shao and Lan-Zhe Guo.  
-*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
-
-- **D3: Diversity, Difficulty, and Dependability-Aware Data Selection for Sample-Efficient LLM Instruction Tuning**  
-Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **<u>Xiao-Wen Yang</u>**, Bo Zheng, Yi Liu and Lan-Zhe Guo.  
-*The 34th International Joint Conference on Artificial Intelligence (<span style="color: #0366d6">IJCAI 2025</span>).*
-
-- **Abductive Learning for Neuro-Symbolic Grounded Imitation.** [[PDF]](https://arxiv.org/abs/2411.18201) [[Webpage]](https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/index.html)  
-  Jie-Jing Shao\*, Hao-Ran Hao\*, **<u>Xiao-Wen Yang</u>**, Yu-Feng Li.  
-  *The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<span style="color: #0366d6">KDD'25</span>).*
-
-
-- **LOG: Active Model Adaptation for Label-Efficient OOD Generalization.** [[PDF]](https://openreview.net/pdf?id=VdQWVdT_8v)  
-  Jie-Jing Shao, Lan-Zhe Guo, **<u>Xiao-Wen Yang</u>**, Yu-Feng Li.  
-  *The 36th Conference on Neural Information Processing Systems (<span style="color: #0366d6">NeurIPS 2022</span>).*
-
-### Journal Papers
-- **Open-Set Learning under Covariate Shift.** [[PDF]](https://link.springer.com/article/10.1007/s10994-022-06237-1)  
-  Jie-Jing Shao\*, **<u>Xiao-Wen Yang</u>**\*, Lan-Zhe Guo.  
-  *Machine Learning (<span style="color: #0366d6">ML'22</span>).*
-
-### Other Papers
-
-- **Pianist Transformer: Towards Expressive Piano Performance Rendering via Scalable Self-Supervised Pre-Training.** [[PDF]](https://arxiv.org/pdf/2512.02652)  
-Hong-Jie You, Jie-Jing Shao, **<u>Xiao-Wen Yang</u>**, Lin-Han Jia, Lan-Zhe Guo, Yu-Feng Li.  
-*Preprint, 2025.*
-
-- **LawGPT: Knowledge-Guided Data Generation and Its Application to Legal LLM.** [[PDF]](https://arxiv.org/pdf/2502.06572)   
-  Zhi Zhou, Kun-Yang Yu, Shi-Yu Tian, **<u>Xiao-Wen Yang</u>**, Jiang-Xin Shi, Peng-Xiao Song, Yi-Xuan Jin, Lan-Zhe Guo, Yu-Feng Li.  
-  *Preprint, 2025.*
-
-
-- **Investigating the Limitation of CLIP Models: The Worst-Performing Categories.** [[PDF]](https://arxiv.org/pdf/2310.03324.pdf)  
-  Jie-Jing Shao\*, Jiang-Xin Shi\*, **<u>Xiao-Wen Yang</u>**\*, Lan-Zhe Guo, Yu-Feng Li.  
-  *Preprint, 2023.*
-
-- **Lightweight Retrieval Tuning for Black-Box Language Models.** [[PDF]](https://neurips2023-enlsp.github.io/papers/paper_32.pdf)  
-  **<u>Xiao-Wen Yang</u>**, Hong-Jie You, Peng-Xiao Song, Hao-Ran Hao, Jie-Jing Shao, Yu-Feng Li.  
-  *NeurIPS'23 [ENSLP](https://neurips2023-enlsp.github.io/) Workshop.*
-
-## Software
-- **LawGPT: A Large Language Model in the Legal Domain.** [[GitHub]](https://github.com/pengxiao-song/LaWGPT)
-
-## Honor
-- National Scholarship, Nanjing University, Oct 2024
-- Outstanding Student, Nanjing University, Nov 2024
-- President's Scholarship, Nanjing University, Oct 2023
-- Outstanding Graduate, Nanjing University, Jun 2023
-
-## Academic Service
-Reviewer for:
-- AAAI 2024, 2025, 2026
-- ICLR 2024, 2025, 2026
-- ICML 2024, 2025, 2026
-- NeurIPS 2023, 2024, 2025
-
-Meta Reviewer for IJCAI 2025
-
-## Teaching Assistant
-- **Matrix Computation.** [[Link]](https://cs.nju.edu.cn/liyf/mc24/mc24.html)  
-  (For Professor Yu-Feng Li; Spring, 2024)
-- **Introduction to Artificial Intelligence.** [[Link]](https://www.lamda.nju.edu.cn/guolz/introai.html)  
-  (For Assistant Professor Lan-Zhe Guo; Autumn, 2023)
-
-
+  <details id="service" class="academic-details"><summary>More about me <span>+</span></summary><div class="academic-content"><div class="biography">{% include cosmic-bio.html %}</div><div class="service-grid">{% include cosmic-service.html %}</div></div></details>
+</div>

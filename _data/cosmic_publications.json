@@ -1,0 +1,422 @@
+[
+  {
+    "title": "Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models.",
+    "authors": "**<u>Xiao-Wen Yang</u>**\\*, Zi-Yu Han\\*, Xi-Hua Zhang, Wen-Da Wei, Jie-Jing Shao, Lan-Zhe Guo, Yu-Feng Li†.",
+    "venue": "*The 43rd International Conference on Machine Learning (<span>ICML 2026</span>).*",
+    "year": 2026,
+    "label": "ICML 2026",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.26733"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/njuyxw/STARS"
+      }
+    ],
+    "sources": [
+      "https://arxiv.org/abs/2605.26733",
+      "https://arxiv.org/pdf/2605.26733",
+      "https://icml.cc/virtual/2026/poster/61109"
+    ],
+    "verified_on": "2026-09-05",
+    "art_scene": 4,
+    "art_label": "STARS / STABLE LATENT ORBITS"
+  },
+  {
+    "title": "Mitigating Neuro-Symbolic Reasoning Shortcuts with Data-Driven Knowledge Augmentation.",
+    "authors": "Yu-Feng Li, **<u>Xiao-Wen Yang</u>**, Wen-Da Wei, Jie-Jing Shao, Lan-Zhe Guo.",
+    "venue": "*The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<span>KDD 2026</span>), V.2, pp. 2861–2872.*",
+    "year": 2026,
+    "label": "KDD 2026",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1145/3770855.3817988"
+      }
+    ],
+    "sources": [
+      "https://doi.org/10.1145/3770855.3817988"
+    ],
+    "verified_on": "2026-09-05",
+    "art_scene": 1,
+    "art_label": "KNOWLEDGE AUGMENTATION / LOGIC CONSTELLATION"
+  },
+  {
+    "title": "Pianist Transformer: Towards Expressive Piano Performance Rendering via Scalable Self-Supervised Pre-Training.",
+    "authors": "Hong-Jie You, Jie-Jing Shao, **<u>Xiao-Wen Yang</u>**, Lin-Han Jia, Lan-Zhe Guo, Yu-Feng Li.",
+    "venue": "*The 43rd International Conference on Machine Learning (<span>ICML 2026</span>).*",
+    "year": 2026,
+    "label": "ICML 2026",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2512.02652"
+      }
+    ],
+    "art_scene": 5,
+    "art_label": "PIANIST TRANSFORMER / COSMIC HARMONICS",
+    "sources": [
+      "https://arxiv.org/abs/2512.02652",
+      "https://icml.cc/virtual/2026/poster/61542"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "FormalImG: Evaluating Structural Compositional Generalization for T2I Models.",
+    "authors": "Hong-Jie You, Jie-Jing Shao, **<u>Xiao-Wen Yang</u>**, Zhi-Fan Wu, Lin-Han Jia, Lan-Zhe Guo, Yu-Feng Li.",
+    "venue": "*Findings of EMNLP 2026 (accepted). Earlier version: ICML 2026 Workshop on Combining Theory and Benchmarks.*",
+    "year": 2026,
+    "label": "EMNLP 2026 Findings",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=4wzRPQ1Vqc"
+      },
+      {
+        "label": "Paper",
+        "url": "https://openreview.net/forum?id=4wzRPQ1Vqc"
+      }
+    ],
+    "sources": [
+      "https://sh-jj.github.io/",
+      "https://openreview.net/forum?id=4wzRPQ1Vqc"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "A Review of the IJCAI 2025 Travel Planning Challenge: Bench-marking LLM Agents with Compositional Constraints.",
+    "authors": "Bo-Wen Zhang\\*, Jin Ye\\*, Jie-Jing Shao\\*, **<u>Xiao-Wen Yang</u>**, Kun-Yang Yu, Zhi Zhou, Yu-Feng Li, Lan-Zhe Guo†.",
+    "venue": "*Frontiers of Computer Science, 2026. Published online June 12, 2026.*",
+    "year": 2026,
+    "label": "FCS 2026",
+    "category": "Journal",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://journal.hep.com.cn/fcs/EN/10.1007/s11704-026-52004-z"
+      }
+    ],
+    "sources": [
+      "https://journal.hep.com.cn/fcs/EN/10.1007/s11704-026-52004-z",
+      "https://sh-jj.github.io/"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "Re²: Reflective Rule Induction and Rule-Guided Refinement for Embodied Planning.",
+    "authors": "Yang Chen, Hong-Jie You, Jie-Jing Shao, **<u>Xiao-Wen Yang</u>**, Ming Yang, Yu-Feng Li, Lan-Zhe Guo.",
+    "venue": "*The 2nd Workshop on Foundation Models Meet Embodied Agents at CVPR 2026.*",
+    "year": 2026,
+    "label": "CVPR 2026 Workshop",
+    "category": "Workshop",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=taDQJktM4Q"
+      },
+      {
+        "label": "Paper",
+        "url": "https://openreview.net/forum?id=taDQJktM4Q"
+      }
+    ],
+    "sources": [
+      "https://foundation-models-meet-embodied-agents.github.io/cvpr2026/",
+      "https://scholar.google.com/citations?view_op=view_citation&user=QLnf8eQAAAAJ&citation_for_view=QLnf8eQAAAAJ:nZcligLrVowC"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "FormalML: A Benchmark for Evaluating Formal Subgoal Completion in Machine Learning Theory.",
+    "authors": "**<u>Xiao-Wen Yang</u>**\\*, Zihao Zhang\\*, Jianuo Cao, Zhi Zhou, Zenan Li, Lan-Zhe Guo, Yuan Yao, Taolue Chen, Yu-Feng Li†, Xiaoxing Ma†.",
+    "venue": "*The 14th International Conference on Learning Representations (<span style=\"color: #0366d6\">ICLR 2026</span>).*",
+    "year": 2026,
+    "label": "ICLR 2026",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/abs/2510.02335"
+      }
+    ]
+  },
+  {
+    "title": "ChinaTravel: An Open-Ended Benchmark for Language Agents in Chinese Travel Planning.",
+    "authors": "Jie-Jing Shao\\*, Bo-Wen Zhang\\*, **<u>Xiao-Wen Yang</u>**\\*, Bai-Zhi Chen, Si-Yu Han, Jing-Hao Pang, Wen-Da Wei, Guohao Cai, Zhenhua Dong, Lan-Zhe Guo†, Yu-Feng Li†.",
+    "venue": "*The 14th International Conference on Learning Representations (<span style=\"color: #0366d6\">ICLR 2026</span>).*",
+    "year": 2026,
+    "label": "ICLR 2026",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2412.13682.pdf"
+      },
+      {
+        "label": "Webpage",
+        "url": "https://www.lamda.nju.edu.cn/shaojj/ChinaTravel/index.html"
+      }
+    ]
+  },
+  {
+    "title": "Step Back to Leap Forward: Self-Backtracking for Symbolic Reasoning and Planning in Language Models.",
+    "authors": "**<u>Xiao-Wen Yang</u>**, Xuan-Yi Zhu, Ding-Chu Zhang, Wen-Da Wei, Jie-Jing Shao, Zhi Zhou, Lan-Zhe Guo, Yu-Feng Li.",
+    "venue": "*The 40th AAAI Conference on Artificial Intelligence (<span style=\"color: #0366d6\">AAAI 2026</span>).*",
+    "year": 2026,
+    "label": "AAAI 2026",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://www.arxiv.org/pdf/2502.04404"
+      },
+      {
+        "label": "Webpage",
+        "url": "/assets/self-backtracking/index.html"
+      }
+    ]
+  },
+  {
+    "title": "Programmatic Context Augmentation for LLM-based Symbolic Regression.",
+    "authors": "Hao Liu, **<u>Xiao-Wen Yang</u>**, Atharva Sehgal, Yixin Wang, Lan-Zhe Guo, Yu-Feng Li, Yisong Yue.",
+    "venue": "*Preprint, 2026.*",
+    "year": 2026,
+    "label": "Preprint 2026",
+    "category": "Preprint",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.03101"
+      }
+    ],
+    "sources": [
+      "https://arxiv.org/abs/2605.03101"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "Thinking with Tables: Enhancing Multi-Modal Tabular Understanding via Neuro-Symbolic Reasoning.",
+    "authors": "Kun-Yang Yu, Zhi Zhou, Shi-Yu Tian, **<u>Xiao-Wen Yang</u>**, Zi-Yi Jia, Ming Yang, Zi-Jian Cheng, Lan-Zhe Guo, Yu-Feng Li.",
+    "venue": "*Preprint, 2026.*",
+    "year": 2026,
+    "label": "Preprint 2026",
+    "category": "Preprint",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2603.24004"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/kunyang-YU/Thinking-with-Tables"
+      }
+    ],
+    "sources": [
+      "https://arxiv.org/abs/2603.24004"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "Hindsight Credit Assignment for Long-Horizon LLM Agents.",
+    "authors": "Hui-Ze Tan\\*, **<u>Xiao-Wen Yang</u>**\\*, Hao Chen\\*, Jie-Jing Shao, Yi Wen, Yuteng Shen, Weihong Luo†, Xiku Du, Lan-Zhe Guo, Yu-Feng Li†.",
+    "venue": "*Preprint, 2026.*",
+    "year": 2026,
+    "label": "Preprint 2026",
+    "category": "Preprint",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2603.08754"
+      }
+    ],
+    "sources": [
+      "https://arxiv.org/abs/2603.08754",
+      "https://arxiv.org/html/2603.08754v1"
+    ],
+    "verified_on": "2026-09-05"
+  },
+  {
+    "title": "Neuro-Symbolic Artificial Intelligence: Towards Improving the Reasoning Abilities of Large Language Models.",
+    "authors": "**<u>Xiao-Wen Yang</u>**\\*, Jie-Jing Shao\\*, Lan-Zhe Guo\\*, Bo-Wen Zhang, Zhi Zhou, Lin-Han Jia, Wang-Zhou Dai, Yu-Feng Li.",
+    "venue": "*The 34th International Joint Conference on Artificial Intelligence (<span style=\"color: #0366d6\">IJCAI 2025 Survey Track</span>).*",
+    "year": 2025,
+    "label": "IJCAI 2025 Survey Track",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/abs/2508.13678"
+      }
+    ]
+  },
+  {
+    "title": "CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search.",
+    "authors": "**<u>Xiao-Wen Yang</u>**, Zhi Zhou, Haiming Wang, Aoxue Li, Wen-Da Wei, Hui Jin, Zhenguo Li, Yu-Feng Li.",
+    "venue": "*The 13th International Conference on Learning Representations (<span style=\"color: #0366d6\">ICLR 2025</span>).*",
+    "year": 2025,
+    "label": "ICLR 2025",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=VQwI055flA"
+      },
+      {
+        "label": "Webpage",
+        "url": "/assets/CARTS/index.html"
+      }
+    ]
+  },
+  {
+    "title": "Analysis for Abductive Learning and Neural-Symbolic Reasoning Shortcuts.",
+    "authors": "**<u>Xiao-Wen Yang</u>**, Wen-Da Wei, Jie-Jing Shao, Yu-Feng Li, Zhi-Hua Zhou.",
+    "venue": "*The 41st International Conference on Machine Learning (<span style=\"color: #0366d6\">ICML 2024</span>).*",
+    "year": 2024,
+    "label": "ICML 2024",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=AQYabSOfci"
+      },
+      {
+        "label": "Webpage",
+        "url": "/shortcuttheory/"
+      }
+    ]
+  },
+  {
+    "title": "Safe Abductive Learning in the Presence of Inaccurate Rules.",
+    "authors": "**<u>Xiao-Wen Yang</u>**, Jie-Jing Shao, Wei-Wei Tu, Yu-Feng Li, Wang-Zhou Dai, Zhi-Hua Zhou.",
+    "venue": "*The 38th AAAI Conference on Artificial Intelligence (<span style=\"color: #0366d6\">AAAI 2024</span>).*",
+    "year": 2024,
+    "label": "AAAI 2024",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29572"
+      }
+    ]
+  },
+  {
+    "title": "AutoEvolve: Automatically Evolving Queries for Applicable and Scalable Retrieval-Augmented Generation Benchmarking.",
+    "authors": "Dingchu Zhang, Xiaowen Zhang, Yue Fei, Renjun Hu, **<u>Xiaowen Yang</u>**, Zhi Zhou, Baixuan Li, Yufeng Li, Xing Shi, Wei Lin.",
+    "venue": "*The 2025 Conference on Empirical Methods in Natural Language Processing (<span style=\"color: #0366d6\">EMNLP 2025</span>).*",
+    "year": 2025,
+    "label": "EMNLP 2025",
+    "category": "Conference",
+    "links": []
+  },
+  {
+    "title": "Curriculum Abductive Learning for Mitigating Reasoning Shortcuts.",
+    "authors": "Wen-Da Wei, **<u>Xiao-Wen Yang</u>**, Jie-Jing Shao and Lan-Zhe Guo.",
+    "venue": "*The 34th International Joint Conference on Artificial Intelligence (<span style=\"color: #0366d6\">IJCAI 2025</span>).*",
+    "year": 2025,
+    "label": "IJCAI 2025",
+    "category": "Conference",
+    "links": []
+  },
+  {
+    "title": "D3: Diversity, Difficulty, and Dependability-Aware Data Selection for Sample-Efficient LLM Instruction Tuning",
+    "authors": "Jia Zhang, Chen-Xi Zhang, Yao Liu, Yi-Xuan Jin, **<u>Xiao-Wen Yang</u>**, Bo Zheng, Yi Liu and Lan-Zhe Guo.",
+    "venue": "*The 34th International Joint Conference on Artificial Intelligence (<span style=\"color: #0366d6\">IJCAI 2025</span>).*",
+    "year": 2025,
+    "label": "IJCAI 2025",
+    "category": "Conference",
+    "links": []
+  },
+  {
+    "title": "Abductive Learning for Neuro-Symbolic Grounded Imitation.",
+    "authors": "Jie-Jing Shao\\*, Hao-Ran Hao\\*, **<u>Xiao-Wen Yang</u>**, Yu-Feng Li.",
+    "venue": "*The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<span style=\"color: #0366d6\">KDD'25</span>).*",
+    "year": 2025,
+    "label": "KDD'25",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/abs/2411.18201"
+      },
+      {
+        "label": "Webpage",
+        "url": "https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/index.html"
+      }
+    ]
+  },
+  {
+    "title": "LOG: Active Model Adaptation for Label-Efficient OOD Generalization.",
+    "authors": "Jie-Jing Shao, Lan-Zhe Guo, **<u>Xiao-Wen Yang</u>**, Yu-Feng Li.",
+    "venue": "*The 36th Conference on Neural Information Processing Systems (<span style=\"color: #0366d6\">NeurIPS 2022</span>).*",
+    "year": 2022,
+    "label": "NeurIPS 2022",
+    "category": "Conference",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=VdQWVdT_8v"
+      }
+    ]
+  },
+  {
+    "title": "Open-Set Learning under Covariate Shift.",
+    "authors": "Jie-Jing Shao\\*, **<u>Xiao-Wen Yang</u>**\\*, Lan-Zhe Guo.",
+    "venue": "*Machine Learning (<span style=\"color: #0366d6\">ML'22</span>).*",
+    "year": 2022,
+    "label": "ML'22",
+    "category": "Journal",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://link.springer.com/article/10.1007/s10994-022-06237-1"
+      }
+    ]
+  },
+  {
+    "title": "LawGPT: Knowledge-Guided Data Generation and Its Application to Legal LLM.",
+    "authors": "Zhi Zhou, Kun-Yang Yu, Shi-Yu Tian, **<u>Xiao-Wen Yang</u>**, Jiang-Xin Shi, Peng-Xiao Song, Yi-Xuan Jin, Lan-Zhe Guo, Yu-Feng Li.",
+    "venue": "*Preprint, 2025.*",
+    "year": 2025,
+    "label": "Preprint 2025",
+    "category": "Preprint / Workshop",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2502.06572"
+      }
+    ]
+  },
+  {
+    "title": "Investigating the Limitation of CLIP Models: The Worst-Performing Categories.",
+    "authors": "Jie-Jing Shao\\*, Jiang-Xin Shi\\*, **<u>Xiao-Wen Yang</u>**\\*, Lan-Zhe Guo, Yu-Feng Li.",
+    "venue": "*Preprint, 2023.*",
+    "year": 2023,
+    "label": "Preprint 2023",
+    "category": "Preprint / Workshop",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2310.03324.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Lightweight Retrieval Tuning for Black-Box Language Models.",
+    "authors": "**<u>Xiao-Wen Yang</u>**, Hong-Jie You, Peng-Xiao Song, Hao-Ran Hao, Jie-Jing Shao, Yu-Feng Li.",
+    "venue": "*NeurIPS'23 [ENSLP](https://neurips2023-enlsp.github.io/) Workshop.*",
+    "year": 2023,
+    "label": "NeurIPS 2023 Workshop",
+    "category": "Preprint / Workshop",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://neurips2023-enlsp.github.io/papers/paper_32.pdf"
+      }
+    ]
+  }
+]
